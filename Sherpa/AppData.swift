@@ -81,10 +81,10 @@ class DataDashBoard {
     }
     
     let scheduledTours = [
-        ScheduledEntry(tourTime: "10", tourTimeAmorPM: "AM", tourName: "Lake Tahoe", tourDate: "19.08.2015", tourGuide: "Ron Johnson"),
-        ScheduledEntry(tourTime: "07", tourTimeAmorPM: "PM", tourName: "Reno", tourDate: "10.12.2015", tourGuide: "Rohit Sharma"),
-        ScheduledEntry(tourTime: "12", tourTimeAmorPM: "AM", tourName: "LA Night Club", tourDate: "13.05.2015", tourGuide: "Fernando Lopez"),
-        ScheduledEntry(tourTime: "03", tourTimeAmorPM: "PM", tourName: "Santa Monica", tourDate: "24.03.2015", tourGuide: "Django Williams")
+        ScheduledEntry(tourTime: "10", tourTimeAmorPM: "AM", tourName: "Monkey Off Your Back", tourDate: "19.08.2015", tourGuide: ""),
+        ScheduledEntry(tourTime: "07", tourTimeAmorPM: "PM", tourName: "UpCounsel", tourDate: "10.12.2015", tourGuide: ""),
+        ScheduledEntry(tourTime: "12", tourTimeAmorPM: "AM", tourName: "Mighty Signal", tourDate: "13.05.2015", tourGuide: ""),
+        ScheduledEntry(tourTime: "03", tourTimeAmorPM: "PM", tourName: "Humanoid", tourDate: "24.03.2015", tourGuide: "")
     ]
     
 }

@@ -13,7 +13,7 @@ import Parse
 
 class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate {
     
-    @IBOutlet weak var tableView: UITableView!
+    //@IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sumLabel: UILabel!
     @IBOutlet weak var reviewImage: UIImageView!
     @IBOutlet weak var costLabel: UILabel!
@@ -24,10 +24,14 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
     @IBOutlet weak var requestButton: UIButton!
     var requestPressedCounter: Int = 1
     
-   
+    var business: Business? {
+        didSet {
+            self.setLabels()
+        }
+    }
     
     var cells: NSArray = []
-    var languages = ["Mandarin", "Japanese", "Hindi", "Urdu", "Saitama", "Chiba", "Hyogo", "Hokkaido", "Fukuoka", "Shizuoka"]
+    var languages = ["Taxation","Legal Consulting","Legal Service"]
     var time = ["9:30", "10:30", "11:30", "12:30", "1:30", "2:30", "3:30"]
     
      var tourCost: String = "" //costLabel
@@ -38,14 +42,24 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
      var selectedLanguage: String = ""
      var selectedTime: String = ""
    
-   
+    func setLabels() {
+        if let costLabel = self.costLabel, sumLabel = self.sumLabel, nameLabel = self.nameLabel, business = self.business{
+            self.costLabel.text = business.price
+            self.sumLabel.text = business.description
+           // self.languages = business.services
+            self.nameLabel.text = business.name
+            
+            println(self.costLabel.text)
+            println(self.sumLabel.text)
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 44
+        self.setLabels()
+        //self.tableView.rowHeight = UITableViewAutomaticDimension
+        //self.tableView.estimatedRowHeight = 44
       
         
         self.pickerView.delegate = self
@@ -87,11 +101,10 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         self.timePicker.maskDisabled = false
         self.timePicker.reloadData()
         
-        nameLabel.text = tourName
-        costLabel.text = tourCost
-        sumLabel.text = tourSum
-        self.languages = tourLang
-        self.time = tourTimes
+        //nameLabel.text = tourName
+        //costLabel.text = tourCost
+       // sumLabel.text = tourSum
+        
         
         self.selectedLanguage = "None"
         self.selectedTime = "None"
@@ -125,18 +138,15 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
     
     */
     func pickerView(pickerView: AKPickerView, titleForItem item: Int) -> String {
-        
-        var title: String
-        
+        var title : String
         if(pickerView.tag == 1){
-        title = self.languages[item]
+            title = self.languages[item]
         }
         else{
-          title = self.time[item]
+            title = self.time[item]
         }
         
-    return title
-        
+        return title
     }
     
     func pickerView(pickerView: AKPickerView, imageForItem item: Int) -> UIImage {
@@ -166,40 +176,10 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         }
     }
     
-    
-    @IBAction func requestButtonPressed(sender: UIButton) {
-        if requestPressedCounter == 1 {
-            if (self.selectedLanguage == "None" || self.selectedTime == "None"){
-                //GIVES AN ERROR MESSAGE
-                println("Stop baby")
-            }
-            else{ //User has selected time, date and language
-                var request = PFObject(className: "RequestTour")
-                request["requestedTime"] = self.selectedTime
-                request["requestedLang"] = self.selectedLanguage
-                request["fromUser"] = PFUser.currentUser()
-                request["isApproved"] = false
-                request.saveInBackgroundWithBlock{(success: Bool, error: NSError?) -> Void in
-                    if (success){
-                        //do good shit
-                    }
-                    else{
-                        //cry bitch
-                    }
-                }
-            }
-        }
-        else {
-            //gogo
-        }
-        requestPressedCounter++
-        
-    }
-    
 }
 
  
-
+/*
  extension ReserveViewController: UITableViewDataSource{
     
      func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -236,4 +216,4 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         return cells[indexPath.section][indexPath.row] as! UITableViewCell
     }
 }
-
+*/

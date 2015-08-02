@@ -198,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				659895AD1B5B249400607B5E /* Tour.swift */,
-				15E23AF71B6DF358005DA49F /* StaticHelperMethods.swift */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -238,6 +237,7 @@
 				F1EEC44F1B5F06B4008A04CF /* ParseLoginHelper.swift */,
 				659895B31B5B989F00607B5E /* LoginViewController.swift */,
 				F1EEC45A1B5FFA8E008A04CF /* SignUpViewController.swift */,
+				15E23AF71B6DF358005DA49F /* StaticHelperMethods.swift */,
 				F10E8D821B693A790037E340 /* ReserveViewController.swift */,
 				E2A3444B1B5B3140004CAF3A /* ToursViewController.swift */,
 				E2A344591B5C21CA004CAF3A /* TimelineViewController.swift */,

@@ -12,7 +12,7 @@ class MainTimeLineViewController: UIViewController {
     var newArray = [Business]()
     var newNewArray = [Business]()
     var searchRadius: Float = 0
-
+    var selectedBusiness: Business?
     @IBOutlet var tableView: UITableView!
     //Global variables
     @IBOutlet weak var distanceRadiusLabel: UILabel!
@@ -34,6 +34,7 @@ class MainTimeLineViewController: UIViewController {
             business.location.assignLocation()
         }
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         newArray =  allBusinesses.filter { (T:Business) -> Bool in
             // checking it is not nil
             if let sector = self.sector{
@@ -53,6 +54,12 @@ class MainTimeLineViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showBusinessSegue" {
+            let destination = segue.destinationViewController as! ReserveViewController
+            destination.business = self.selectedBusiness
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -84,6 +91,12 @@ extension MainTimeLineViewController : UITableViewDataSource {
         cell.selectionStyle = UITableViewCellSelectionStyle.None
        //TODO implement price range cell.rating = allBusinesses[indexPath.row].reviews
         return cell
+    }
+}
+extension MainTimeLineViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.selectedBusiness = newNewArray[indexPath.row]
+        performSegueWithIdentifier("showBusinessSegue", sender: self)
     }
 }
 /*func search(tags: [String], name: String, location: Location, searchRadius: Double, userLocation: CLLocationCoordinate2D){

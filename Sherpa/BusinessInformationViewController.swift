@@ -54,13 +54,13 @@ class BusinessInformationViewController: UIViewController {
         case 2:
             self.starsImageView.image = UIImage(named: "Two Stars")
         case 3:
-            self.starsImageView.image = UIImage(named: "Three Stars")
+            self.starsImageView.image = UIImage(named: "3Stars")
         case 4:
-            self.starsImageView.image = UIImage(named: "Four Stars")
-        case 4:
-            self.starsImageView.image = UIImage(named: "Five Stars")
+            self.starsImageView.image = UIImage(named: "4Stars")
+        case 5:
+            self.starsImageView.image = UIImage(named: "5Stars")
         default:
-            self.starsImageView.image = UIImage(named: "Five Stars")
+            self.starsImageView.image = UIImage(named: "5Stars")
         }
         
     }
