@@ -22,7 +22,7 @@ class Service {
             T.name == name
             }
         allBuisnesses.filter { (T:Business) -> Bool in
-        T.location.isInRange(userLocation, rangeInMeters: searchRadius) ?? false
+        T.location.isInRange(searchRadius) ?? false
         }
         allBuisnesses.filter { (T:Business) -> Bool in
            self.foundTag(tags, objectTags: T.tags)

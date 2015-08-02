@@ -28,12 +28,12 @@ class Location {
             } else if response.mapItems.count == 0 {
                 println("No matches found")
             } else {
-                println("Matches found")
-                self.location = (response.mapItems[0] as! MKMapItem).placemark.coordinate
+                self.location = (response.mapItems[response.mapItems.count-1] as! MKMapItem).placemark.coordinate
             }
         })
     }
-    func isInRange(userLocation: CLLocationCoordinate2D, rangeInMeters: Double) -> Bool {
+    func isInRange(rangeInMeters: Double) -> Bool {
+        var userLocation = CLLocationCoordinate2D(latitude: 37.76, longitude: -122.39)
         var thisLocation = CLLocation(latitude: self.location.latitude, longitude: self.location.longitude)
         var thatLocation = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
         var distance: Double = thisLocation.distanceFromLocation(thatLocation)
