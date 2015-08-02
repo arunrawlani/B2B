@@ -62,6 +62,7 @@ extension MainTimeLineViewController : UITableViewDataSource {
         cell.nameLabel.text = newArray[indexPath.row].name
         cell.priceLabel.text = "Cost: \(newArray[indexPath.row].price)"
         cell.locationLabel.text = ("\(newArray[indexPath.row].location.city), \(newArray[indexPath.row].location.state)")
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
        //TODO implement price range cell.rating = allBusinesses[indexPath.row].reviews
         return cell
     }
