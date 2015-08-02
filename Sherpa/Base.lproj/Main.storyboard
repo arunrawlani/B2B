@@ -488,21 +488,24 @@
                                                     <rect key="frame" x="34" y="781.5" width="532" height="47"/>
                                                 </variation>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRe-8L-stC">
-                                                <rect key="frame" x="472" y="193" width="46" height="30"/>
-                                                <state key="normal" title="Button">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="pMx-6L-hdI" kind="show" id="fEy-he-4ko"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Service:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMl-M3-qeE">
                                                 <rect key="frame" x="21" y="418.5" width="58.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRe-8L-stC">
+                                                <rect key="frame" x="472" y="193" width="46" height="30"/>
+                                                <state key="normal" image="reviewButton">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="402" y="299" width="178" height="44"/>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="gky-et-2Nr" kind="show" id="SJo-H6-5U5"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="YUc-4b-snl" secondAttribute="trailing" id="0b3-Aj-QJW"/>
@@ -547,8 +550,12 @@
                                             <constraint firstItem="YUc-4b-snl" firstAttribute="top" secondItem="uSN-71-umb" secondAttribute="top" id="nBF-fn-S6V"/>
                                             <constraint firstItem="VMl-M3-qeE" firstAttribute="top" secondItem="3OQ-bv-DQN" secondAttribute="bottom" constant="21" id="ovV-D9-RiL"/>
                                             <constraint firstItem="YUc-4b-snl" firstAttribute="top" secondItem="uSN-71-umb" secondAttribute="top" id="sux-db-cMb"/>
-                                            <constraint firstItem="qRe-8L-stC" firstAttribute="top" secondItem="YUc-4b-snl" secondAttribute="bottom" constant="32" id="tJV-5X-xVb"/>
-                                            <constraint firstAttribute="trailing" secondItem="qRe-8L-stC" secondAttribute="trailing" constant="82" id="tXI-40-ty9"/>
+                                            <constraint firstItem="qRe-8L-stC" firstAttribute="top" secondItem="YUc-4b-snl" secondAttribute="bottom" constant="32" id="tJV-5X-xVb">
+                                                <variation key="widthClass=compact" constant="35"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="qRe-8L-stC" secondAttribute="trailing" constant="82" id="tXI-40-ty9">
+                                                <variation key="widthClass=compact" constant="20"/>
+                                            </constraint>
                                             <constraint firstItem="zd3-yz-yas" firstAttribute="top" secondItem="a2N-Ck-dwH" secondAttribute="bottom" constant="15" id="tfc-h3-HUl"/>
                                             <constraint firstItem="zd3-yz-yas" firstAttribute="leading" secondItem="uSN-71-umb" secondAttribute="leading" constant="20" id="uKR-p7-CFE"/>
                                             <constraint firstItem="LaZ-53-gGM" firstAttribute="leading" secondItem="uSN-71-umb" secondAttribute="leading" constant="23" id="vAW-vR-2p5"/>
@@ -643,7 +650,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GU9-vT-XGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2670" y="-1109"/>
+            <point key="canvasLocation" x="2769" y="-1105"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kaC-nJ-nBv">
+            <objects>
+                <viewController id="gky-et-2Nr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yHU-IE-19m"/>
+                        <viewControllerLayoutGuide type="bottom" id="8jB-Pa-DbI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I9P-tS-GvI">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reviewScreen" translatesAutoresizingMaskIntoConstraints="NO" id="QcF-aJ-b8n">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8jB-Pa-DbI" firstAttribute="top" secondItem="QcF-aJ-b8n" secondAttribute="bottom" id="2t1-aO-oat"/>
+                            <constraint firstItem="QcF-aJ-b8n" firstAttribute="leading" secondItem="I9P-tS-GvI" secondAttribute="leading" id="5hi-hp-HKR"/>
+                            <constraint firstAttribute="trailing" secondItem="QcF-aJ-b8n" secondAttribute="trailing" id="8us-kG-b4K"/>
+                            <constraint firstItem="QcF-aJ-b8n" firstAttribute="top" secondItem="I9P-tS-GvI" secondAttribute="top" id="Mfp-9i-U4D"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="QcF-aJ-b8n"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="5hi-hp-HKR"/>
+                                <exclude reference="8us-kG-b4K"/>
+                                <exclude reference="Mfp-9i-U4D"/>
+                                <exclude reference="2t1-aO-oat"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="QcF-aJ-b8n"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="5hi-hp-HKR"/>
+                                <include reference="8us-kG-b4K"/>
+                                <include reference="Mfp-9i-U4D"/>
+                                <include reference="2t1-aO-oat"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTi-27-5pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4080" y="-1095"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5Pm-u5-NgQ">
@@ -759,18 +816,12 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5stars" translatesAutoresizingMaskIntoConstraints="NO" id="IKr-9i-VtO">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                <variation key="widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="150" y="169" width="127" height="32"/>
-                                                </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contractor &amp; Customer Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIn-ZZ-mAx">
                                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" red="0.99953332411504425" green="0.99953332411504425" blue="0.99953332411504425" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="22" y="238" width="261" height="21"/>
-                                                </variation>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4VT-pz-rW5">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -798,7 +849,7 @@
                                                     </mask>
                                                 </variation>
                                                 <variation key="widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="0.0" y="261" width="419" height="368"/>
+                                                    <rect key="frame" x="0.0" y="327" width="404" height="345"/>
                                                     <mask key="constraints">
                                                         <include reference="ADm-RW-qVP"/>
                                                     </mask>
@@ -916,6 +967,9 @@
                                     </constraint>
                                     <constraint firstAttribute="bottom" secondItem="Tfb-XR-dJK" secondAttribute="bottom" id="oqT-sb-gT0"/>
                                 </constraints>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -952,7 +1006,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrj-Bf-3b1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3708" y="-1357"/>
+            <point key="canvasLocation" x="3606" y="-2109"/>
         </scene>
         <!--Tour Overview View Controller-->
         <scene sceneID="vly-fn-QEg">
@@ -1955,6 +2009,8 @@
         <image name="ViewTimeline" width="158" height="44"/>
         <image name="facebook" width="40" height="41"/>
         <image name="reserve" width="311" height="44"/>
+        <image name="reviewButton" width="123" height="44"/>
+        <image name="reviewScreen" width="375" height="677"/>
         <image name="twitter" width="41" height="41"/>
     </resources>
     <inferredMetricsTieBreakers>

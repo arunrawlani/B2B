@@ -9,10 +9,37 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dashboard Background" translatesAutoresizingMaskIntoConstraints="NO" id="zlL-1O-T37">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Jigsaw" translatesAutoresizingMaskIntoConstraints="NO" id="pqt-Co-xTk">
+                    <rect key="frame" x="47" y="106" width="280" height="243"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="BizCollab" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-NU-Iem">
+                    <rect key="frame" x="47" y="403" width="266" height="99"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="56"/>
+                    <color key="textColor" red="0.96240666482300885" green="0.62186622801306524" blue="0.12223230619537702" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="DDN-NU-Iem" firstAttribute="top" secondItem="pqt-Co-xTk" secondAttribute="bottom" constant="54" id="0Ba-OR-gQ1"/>
+                <constraint firstItem="DDN-NU-Iem" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="47" id="3TM-1g-OXr"/>
+                <constraint firstAttribute="bottom" secondItem="DDN-NU-Iem" secondAttribute="bottom" constant="165" id="5zJ-gp-rQN"/>
+                <constraint firstItem="pqt-Co-xTk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="47" id="Ak3-UV-hKq"/>
+                <constraint firstItem="pqt-Co-xTk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="106" id="MvY-zV-ZKs"/>
+                <constraint firstAttribute="trailing" secondItem="pqt-Co-xTk" secondAttribute="trailing" constant="48" id="peQ-hI-kMW"/>
+                <constraint firstAttribute="trailing" secondItem="DDN-NU-Iem" secondAttribute="trailing" constant="62" id="zzA-0N-67k"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="490.5" y="209.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Dashboard Background" width="375" height="667"/>
+        <image name="Jigsaw" width="268" height="238"/>
+    </resources>
 </document>
