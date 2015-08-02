@@ -55,11 +55,11 @@ class TableViewForExplore: UITableViewController, explore {
         return cell
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "goToTours" {
-            let secondVC:ToursViewController = segue.destinationViewController as! ToursViewController
-            secondVC.mainCityLabelText = textOfCity
-            secondVC.mainGraphicImageFileName = imageOfCity
-            secondVC.citySelected = city
+        if segue.identifier == "goToBusiness" {
+            let secondVC = segue.destinationViewController as! BusinessSectorsViewController
+            //secondVC.mainCityLabelText = textOfCity
+            //secondVC.mainGraphicImageFileName = imageOfCity
+            //secondVC.citySelected = city
         }
 
     }
