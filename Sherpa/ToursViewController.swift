@@ -121,10 +121,10 @@ class ToursViewController: UIViewController, UITableViewDelegate , UITableViewDa
         cell.delegate = self
         
         //Changing the display to circular and adding a border
-        cell.userImageView.layer.cornerRadius = cell.userImageView.frame.size.width / 2
+      /*  cell.userImageView.layer.cornerRadius = cell.userImageView.frame.size.width / 2
         cell.userImageView.clipsToBounds = true
         cell.userImageView.layer.borderWidth = 1.0
-        cell.userImageView.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.userImageView.layer.borderColor = UIColor.whiteColor().CGColor*/
        
         if citySelected == 0 { //NEW YORK
         /* cell.imageFilename = data.toursNY[indexPath.row].cityImage
@@ -134,13 +134,13 @@ class ToursViewController: UIViewController, UITableViewDelegate , UITableViewDa
             cell.TourName.text = data.toursNY[indexPath.row].tourName */
             
           //From the in-built library
-          cell.imageFilename = data.toursNY[indexPath.row].cityImage
-          cell.userImageView.image = UIImage(named: data.toursNY[indexPath.row].circularImage)
+            /*  cell.imageFilename = data.toursNY[indexPath.row].cityImage
+          cell.userImageView.image = UIImage(named: data.toursNY[indexPath.row].circularImage) */
             
          //From PARSE
-          cell.costLabel.text = toursNY[indexPath.row].cost
+         /* cell.costLabel.text = toursNY[indexPath.row].cost */
           cell.TourName.text = toursNY[indexPath.row].tourName
-          let languages = toursNY[indexPath.row].langOffered!
+        /*let languages = toursNY[indexPath.row].langOffered!
             .reduce("") {(total, language)in
                 if (total == ""){
                 return total + "\(language)"
@@ -149,7 +149,7 @@ class ToursViewController: UIViewController, UITableViewDelegate , UITableViewDa
                    return  total + ", \(language)"
                 }
             }
-            cell.languagesName.text = languages
+            cell.languagesName.text = languages */
             
             
             //AMBIGUOUS: Ask Ami
@@ -172,11 +172,11 @@ class ToursViewController: UIViewController, UITableViewDelegate , UITableViewDa
             cell.TourName.text = data.toursVegas[indexPath.row].tourName*/
             
             //From built-in library
-            cell.imageFilename = data.toursVegas[indexPath.row].cityImage
-            cell.userImageView.image = UIImage(named: data.toursNY[indexPath.row].circularImage)
+        /*    cell.imageFilename = data.toursVegas[indexPath.row].cityImage */
+       /*     cell.userImageView.image = UIImage(named: data.toursNY[indexPath.row].circularImage) */
             
             //From PARSE
-            cell.costLabel.text = toursLV[indexPath.row].cost
+        /*    cell.costLabel.text = toursLV[indexPath.row].cost */
             cell.TourName.text = toursLV[indexPath.row].tourName
             let languages = toursLV[indexPath.row].langOffered!
                 .reduce("") {(total, language)in
@@ -187,7 +187,7 @@ class ToursViewController: UIViewController, UITableViewDelegate , UITableViewDa
                         return  total + ", \(language)"
                     }
             }
-            cell.languagesName.text = languages
+        /*    cell.languagesName.text = languages */
             
             //AMBIGUOUS: Ask Amit
             for tour in self.toursLV {
