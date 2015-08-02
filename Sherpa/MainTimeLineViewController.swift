@@ -14,6 +14,8 @@ class MainTimeLineViewController: UIViewController {
     var searchRadius: Float = 0
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+
     //Global variables
     @IBOutlet weak var distanceRadiusLabel: UILabel!
     @IBAction func sliderValueChanged(sender: UISlider) {
@@ -116,4 +118,48 @@ extension MainTimeLineViewController : UITableViewDataSource {
     
     
 }*/
+extension MainTimeLineViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        let string = searchBar.text
+        var temp = newArray.filter{(T:Business) -> Bool in
+            // checking it is not nil
+            
+                if T.name == string ||  self.foundTag(string, objectTags: T.tags) || self.checkSector(T, sector: string ){
+                    return true
+                }
+            
+            return false
+            // Do any additional setup after loading the view.
+        }
+    self.newNewArray = temp
+        
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    }
+private func foundTag(tags: String, objectTags: [String]) -> Bool {
+    // TODO Use better comparison
+        for objectTag in objectTags {
+            if tags == objectTag{
+                return true
+             }
+        
+    }
+    return false
+}
+private func checkSector(T: Business, sector:String) -> Bool{
+
+            if sector == T.sector{
+                return true
+            }
+    return false
+}
+
+
+
+}
 

@@ -681,17 +681,17 @@
                         <viewControllerLayoutGuide type="bottom" id="O1n-0H-Gfa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UUo-TM-Ngd">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard Background" translatesAutoresizingMaskIntoConstraints="NO" id="F0K-OH-66w">
-                                <rect key="frame" x="0.0" y="-1" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="-1" width="414" height="736"/>
                             </imageView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucz-IU-gxz">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfb-XR-dJK" userLabel="Content View">
-                                        <rect key="frame" x="-12" y="0.0" width="375" height="600"/>
+                                        <rect key="frame" x="-12" y="0.0" width="375" height="736"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legal Validations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbF-H6-Agl">
                                                 <rect key="frame" x="70" y="19" width="235" height="23.5"/>
@@ -891,6 +891,13 @@
                                                 <exclude reference="4VT-pz-rW5"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <exclude reference="AkL-l6-GPz"/>
+                                                <exclude reference="a2i-9o-ycQ"/>
+                                                <exclude reference="GQG-98-oic"/>
+                                                <exclude reference="N3t-B0-RWV"/>
+                                                <exclude reference="2mT-8O-tTN"/>
+                                                <exclude reference="Lx0-nl-0Hl"/>
+                                                <exclude reference="pVH-wA-lbi"/>
                                                 <exclude reference="HfF-wA-lw3"/>
                                                 <exclude reference="mxc-cD-ltB"/>
                                                 <exclude reference="Rpe-kg-t5A"/>
@@ -904,13 +911,6 @@
                                                 <exclude reference="e88-uT-wHS"/>
                                                 <exclude reference="kIN-ks-MIm"/>
                                                 <exclude reference="lDE-CC-l91"/>
-                                                <exclude reference="GQG-98-oic"/>
-                                                <exclude reference="N3t-B0-RWV"/>
-                                                <exclude reference="AkL-l6-GPz"/>
-                                                <exclude reference="a2i-9o-ycQ"/>
-                                                <exclude reference="2mT-8O-tTN"/>
-                                                <exclude reference="Lx0-nl-0Hl"/>
-                                                <exclude reference="pVH-wA-lbi"/>
                                                 <exclude reference="NCK-5d-qxs"/>
                                             </mask>
                                         </variation>
@@ -922,15 +922,15 @@
                                                 <include reference="4VT-pz-rW5"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="eZb-aJ-9ox"/>
-                                                <exclude reference="gDK-sN-c6k"/>
-                                                <include reference="GQG-98-oic"/>
-                                                <include reference="N3t-B0-RWV"/>
                                                 <include reference="AkL-l6-GPz"/>
                                                 <include reference="a2i-9o-ycQ"/>
+                                                <include reference="GQG-98-oic"/>
+                                                <include reference="N3t-B0-RWV"/>
                                                 <include reference="2mT-8O-tTN"/>
                                                 <include reference="Lx0-nl-0Hl"/>
                                                 <include reference="pVH-wA-lbi"/>
+                                                <include reference="eZb-aJ-9ox"/>
+                                                <exclude reference="gDK-sN-c6k"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -1906,7 +1906,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Dashboard Background" translatesAutoresizingMaskIntoConstraints="NO" id="qbX-br-l8u">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard Background" translatesAutoresizingMaskIntoConstraints="NO" id="qbX-br-l8u">
                                 <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.95292511224622589" green="0.53113066488749094" blue="0.16122300426637887" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
