@@ -27,7 +27,6 @@ class ToursViewController: UIViewController, UITableViewDelegate , UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        println(mainCityLabelText)
         MainCityLabel.text = mainCityLabelText
         MainCityImageview.image = UIImage(named: mainGraphicImageFileName)
         tableview.allowsSelection = false
