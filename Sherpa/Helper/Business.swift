@@ -14,7 +14,7 @@ class Business {
     var location: Location
     var legalValidation: Bool
     var reviews = [Review]()
-    init(name: String, tags: [String], sectors: [String],legalValidation:Bool,city:String, state: String, location: Location, reviews:[Review]){
+    init(name: String, tags: [String], sectors: [String],legalValidation:Bool,city:String, state: String, reviews:[Review]){
         self.location = Location(city: city, state: state)
         self.tags = tags
         self.sectors = sectors

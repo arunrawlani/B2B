@@ -12,6 +12,7 @@ class BusinessTableViewCell: UITableViewCell {
     //var business: Business? = Business()
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 
