@@ -10,6 +10,7 @@ import UIKit
 
 class MainTimeLineViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
     //Global variables
     var allBusinesses = StaticHelperMethods.getBusiness()
     //TODO make sure the previous VC assigns string to next var
@@ -44,7 +45,7 @@ extension MainTimeLineViewController : UITableViewDataSource {
         return self.allBusinesses.count ?? 0
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        allBuisnesses.filter { (T:Business) -> Bool in
+        allBusinesses.filter { (T:Business) -> Bool in
             // checking it is not nil
             if let sector = self.sector{
                 for sectorInArray in T.sectors {
@@ -55,9 +56,9 @@ extension MainTimeLineViewController : UITableViewDataSource {
             }
             return false
         }
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! BusinessTableViewCell
         //Cell parameters:
-        cell.nameField.text = allBusinesses[indexPath.row].name
+        cell.nameLabel.text = allBusinesses[indexPath.row].name
        //TODO implement price range cell.rating = allBusinesses[indexPath.row].reviews
         return cell
     }

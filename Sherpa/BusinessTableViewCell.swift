@@ -9,7 +9,9 @@
 import UIKit
 
 class BusinessTableViewCell: UITableViewCell {
-    //var business: Business? = Business()
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var servicesLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         
