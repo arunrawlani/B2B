@@ -9,7 +9,7 @@
 import Foundation
 class Review {
     var rating: Int = 0
-    var description: String = ""
+    var description: String
     init(rating: Int, description: String) {
         self.rating = rating
         self.description = description
