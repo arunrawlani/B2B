@@ -1,9 +1,10 @@
 CLANG_CXX_LIBRARY = libc++
-FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/SinchRTC"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_FRAMEWORK_BUILD_PATH" "$(PODS_ROOT)/SinchRTC"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/AKPickerView_Swift.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Bolts.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Bond.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/DatePickerCell.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/FBSDKCoreKit.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/FBSDKLoginKit.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Parse.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/ParseFacebookUtilsV4.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/ParseUI.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SinchRTC.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -ObjC -undefined dynamic_lookup -l"c++" -framework "AKPickerView_Swift" -framework "AVFoundation" -framework "AudioToolbox" -framework "Bolts" -framework "Bond" -framework "DatePickerCell" -framework "FBSDKCoreKit" -framework "FBSDKLoginKit" -framework "Parse" -framework "ParseFacebookUtilsV4" -framework "ParseUI" -framework "Security" -framework "Sinch"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_FRAMEWORK_BUILD_PATH/AKPickerView_Swift.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/Bolts.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/Bond.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/DatePickerCell.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/FBSDKCoreKit.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/FBSDKLoginKit.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/Parse.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/ParseFacebookUtilsV4.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/ParseUI.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/SinchRTC.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -framework "AKPickerView_Swift" -framework "AVFoundation" -framework "AudioToolbox" -framework "Bolts" -framework "Bond" -framework "DatePickerCell" -framework "FBSDKCoreKit" -framework "FBSDKLoginKit" -framework "Parse" -framework "ParseFacebookUtilsV4" -framework "ParseUI" -framework "Security" -framework "Sinch"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods
 PODS_ROOT = ${SRCROOT}/Pods
