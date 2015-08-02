@@ -177,8 +177,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Background" translatesAutoresizingMaskIntoConstraints="NO" id="P9f-hN-nKu">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOU-C8-IXd">
-                                <rect key="frame" x="21" y="219" width="50.5" height="27.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewYork" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-v6-6nt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="257"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label(Potential removal)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOU-C8-IXd">
+                                <rect key="frame" x="21" y="218" width="223" height="27.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" red="0.99574806415929207" green="0.99574806415929207" blue="0.99574806415929207" alpha="1" colorSpace="calibratedRGB"/>
@@ -201,6 +204,17 @@
                                             <subviews>
                                                 <view alpha="0.49999999999999961" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVU-6Z-al7">
                                                     <rect key="frame" x="-92" y="-92" width="784" height="293.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX7-0J-19L" userLabel="Go to tour overview">
+                                                            <rect key="frame" x="92" y="92" width="600" height="109"/>
+                                                            <state key="normal">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="goToOverview:" destination="7Su-TK-lsv" eventType="touchUpInside" id="Uk7-Ll-iOq"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="g1b-gx-4QQ" userLabel="User Image">
@@ -228,32 +242,19 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX7-0J-19L" userLabel="Go to tour overview">
-                                                    <rect key="frame" x="0.0" y="0.5" width="600" height="109"/>
-                                                    <state key="normal">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="goToOverview:" destination="7Su-TK-lsv" eventType="touchUpInside" id="Uk7-Ll-iOq"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="bVU-6Z-al7" firstAttribute="top" secondItem="lJb-4n-zTK" secondAttribute="top" id="09x-20-GMh"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ghe-bS-YmG" secondAttribute="bottom" id="3pL-J0-pNp"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="g6Y-mc-M3o" secondAttribute="trailing" constant="5" id="3pW-em-fOx"/>
-                                                <constraint firstAttribute="bottom" secondItem="TX7-0J-19L" secondAttribute="bottom" id="50b-VC-NqK"/>
                                                 <constraint firstItem="bVU-6Z-al7" firstAttribute="leading" secondItem="lJb-4n-zTK" secondAttribute="leading" id="9hv-lP-saD"/>
-                                                <constraint firstAttribute="trailing" secondItem="TX7-0J-19L" secondAttribute="trailing" id="EKr-VC-Oxn"/>
                                                 <constraint firstItem="EGs-tF-Qy3" firstAttribute="leading" secondItem="lJb-4n-zTK" secondAttribute="leading" constant="10" id="F8U-88-Zv4"/>
                                                 <constraint firstAttribute="bottom" secondItem="bVU-6Z-al7" secondAttribute="bottom" id="NEG-Dn-uzs"/>
                                                 <constraint firstItem="g6Y-mc-M3o" firstAttribute="top" secondItem="lJb-4n-zTK" secondAttribute="topMargin" constant="5" id="UHq-Ke-bCd"/>
                                                 <constraint firstAttribute="bottom" secondItem="g1b-gx-4QQ" secondAttribute="bottom" constant="10" id="bB0-32-3kq"/>
-                                                <constraint firstItem="TX7-0J-19L" firstAttribute="leading" secondItem="lJb-4n-zTK" secondAttribute="leading" id="ieE-aZ-yDi"/>
                                                 <constraint firstItem="g1b-gx-4QQ" firstAttribute="leading" secondItem="lJb-4n-zTK" secondAttribute="leading" constant="10" id="lC3-4O-gcK"/>
                                                 <constraint firstAttribute="trailing" secondItem="bVU-6Z-al7" secondAttribute="trailing" id="nwz-O5-Bcv"/>
-                                                <constraint firstItem="TX7-0J-19L" firstAttribute="top" secondItem="lJb-4n-zTK" secondAttribute="top" id="rFr-O5-zuX"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ghe-bS-YmG" secondAttribute="trailing" constant="5" id="uCE-7G-Ed4"/>
                                                 <constraint firstItem="EGs-tF-Qy3" firstAttribute="top" secondItem="lJb-4n-zTK" secondAttribute="top" constant="10" id="yhJ-IN-Df0"/>
                                             </constraints>
@@ -276,9 +277,6 @@
                                     <outlet property="delegate" destination="Zjw-NC-q1k" id="rEu-h6-Vft"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewYork" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-v6-6nt">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="257"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
