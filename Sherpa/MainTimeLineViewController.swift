@@ -14,14 +14,35 @@ class MainTimeLineViewController: UIViewController {
     var searchRadius: Float = 0
     var selectedBusiness: Business?
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+
     //Global variables
     @IBOutlet weak var distanceRadiusLabel: UILabel!
     @IBAction func sliderValueChanged(sender: UISlider) {
         self.searchRadius = round((sender.value * 3500))
         distanceRadiusLabel.text = ("\(self.searchRadius) Miles")
         self.newNewArray = newArray.filter { (T: Business) -> Bool in
-            return T.location.isInRange(Double(self.searchRadius) * 1609.34)
+            let boolLocation =  T.location.isInRange(Double(self.searchRadius) * 1609.34)
+            var searchBool = true
+
+            if self.searchBar.text != ""{
+            let string = self.searchBar.text
+            var nameBool = false
+            if  T.name.lowercaseString.rangeOfString(string) != nil{
+                nameBool = true
+            }
+            
+            if nameBool ||  self.foundTag(string, objectTags: T.tags) || self.checkServices(T, serviceToBeSearched: string ){
+                searchBool = true
+            } else {
+                searchBool = false
+                }
+            }
+            
+                        // Do any additional setup after loading the view.
+            return searchBool && boolLocation
         }
+
         self.tableView.reloadData()
     }
     //TODO make sure the previous VC assigns string to next var
@@ -33,6 +54,7 @@ class MainTimeLineViewController: UIViewController {
         for business in allBusinesses {
             business.location.assignLocation()
         }
+        self.searchBar.delegate = self
         self.tableView.dataSource = self
         self.tableView.delegate = self
         newArray =  allBusinesses.filter { (T:Business) -> Bool in
@@ -129,4 +151,59 @@ extension MainTimeLineViewController: UITableViewDelegate {
     
     
 }*/
+extension MainTimeLineViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        let string = searchBar.text
+        if !string.isEmpty{
+        var temp = newArray.filter{(T:Business) -> Bool in
+            // checking it is not nil
+            var nameBool = false
+            if  T.name.lowercaseString.rangeOfString(string) != nil{
+                nameBool = true
+            }
+            
+            if nameBool ||  self.foundTag(string, objectTags: T.tags) || self.checkServices(T, serviceToBeSearched: string ){
+                return true
+            }
+            
+            return false
+            // Do any additional setup after loading the view.
+        }
+        self.newNewArray = temp
+        }
+        self.tableView.reloadData()
+        
+    }
+
+    
+
+private func foundTag(tags: String, objectTags: [String]) -> Bool {
+    // TODO Use better comparison
+        for objectTag in objectTags {
+            if objectTag.lowercaseString.rangeOfString(tags) != nil{
+                return true
+             }
+        
+    }
+    return false
+}
+private func checkServices(T: Business, serviceToBeSearched:String) -> Bool{
+    for service in T.services {
+            if service.lowercaseString.rangeOfString(serviceToBeSearched) != nil{
+                return true
+            }
+    }
+    return false
+}
+
+
+
+}
 
