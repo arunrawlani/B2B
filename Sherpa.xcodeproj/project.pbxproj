@@ -11,6 +11,8 @@
 		15E23AEE1B6DA9B2005DA49F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E23AEA1B6DA9B2005DA49F /* Location.swift */; };
 		15E23AEF1B6DA9B2005DA49F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E23AEB1B6DA9B2005DA49F /* Review.swift */; };
 		15E23AF01B6DA9B2005DA49F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E23AEC1B6DA9B2005DA49F /* Service.swift */; };
+		15E23AF21B6DE09E005DA49F /* MainTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E23AF11B6DE09E005DA49F /* MainTimeLineViewController.swift */; };
+		15E23AF81B6DF358005DA49F /* StaticHelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E23AF71B6DF358005DA49F /* StaticHelperMethods.swift */; };
 		288EDE551B6DB73A00628862 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288EDE531B6DB73A00628862 /* BusinessTableViewCell.swift */; };
 		288EDE561B6DB73A00628862 /* BusinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288EDE541B6DB73A00628862 /* BusinessListViewController.swift */; };
 		289F977E1B6DE01300BB7304 /* BusinessReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289F977D1B6DE01300BB7304 /* BusinessReviewsViewController.swift */; };
@@ -71,6 +73,8 @@
 		15E23AEA1B6DA9B2005DA49F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		15E23AEB1B6DA9B2005DA49F /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		15E23AEC1B6DA9B2005DA49F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		15E23AF11B6DE09E005DA49F /* MainTimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTimeLineViewController.swift; sourceTree = "<group>"; };
+		15E23AF71B6DF358005DA49F /* StaticHelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHelperMethods.swift; sourceTree = "<group>"; };
 		288EDE531B6DB73A00628862 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
 		288EDE541B6DB73A00628862 /* BusinessListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessListViewController.swift; sourceTree = "<group>"; };
 		289F977D1B6DE01300BB7304 /* BusinessReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessReviewsViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				659895AD1B5B249400607B5E /* Tour.swift */,
+				15E23AF71B6DF358005DA49F /* StaticHelperMethods.swift */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				F1EEC4571B5F3386008A04CF /* Helper */,
 				659895AC1B5B248500607B5E /* Data Models */,
 				659F00441B5ADECE00E4267B /* AppDelegate.swift */,
+				15E23AF11B6DE09E005DA49F /* MainTimeLineViewController.swift */,
 				F1D2835C1B615D1D000E1BD4 /* OptionViewController.swift */,
 				A49B61321B5B9E0D00F81B3D /* CallViewController.swift */,
 				659F00481B5ADECE00E4267B /* Main.storyboard */,
@@ -457,6 +463,7 @@
 				659895B41B5B989F00607B5E /* LoginViewController.swift in Sources */,
 				289F977E1B6DE01300BB7304 /* BusinessReviewsViewController.swift in Sources */,
 				15E23AF01B6DA9B2005DA49F /* Service.swift in Sources */,
+				15E23AF21B6DE09E005DA49F /* MainTimeLineViewController.swift in Sources */,
 				659895AE1B5B249400607B5E /* Tour.swift in Sources */,
 				F1EEC4591B5F339F008A04CF /* ErrorHandling.swift in Sources */,
 				289F97801B6DE94200BB7304 /* BusinessInformationViewController.swift in Sources */,
@@ -465,6 +472,7 @@
 				659895B21B5B270E00607B5E /* Netwerker.swift in Sources */,
 				F1EEC45B1B5FFA8E008A04CF /* SignUpViewController.swift in Sources */,
 				F1EEC4501B5F06B4008A04CF /* ParseLoginHelper.swift in Sources */,
+				15E23AF81B6DF358005DA49F /* StaticHelperMethods.swift in Sources */,
 				E2A344441B5B0550004CAF3A /* ExploreTableCell.swift in Sources */,
 				E2A344421B5B053C004CAF3A /* TableViewForExplore.swift in Sources */,
 				E2A344541B5B6648004CAF3A /* DashboardViewController.swift in Sources */,
