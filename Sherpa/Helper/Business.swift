@@ -10,7 +10,7 @@ import Foundation
 class Business {
     var tags: [String] = []
     var name: String = ""
-    var sectors = [String]()
+    var sector: String = ""
     var services = [String]()
     var location: Location
     var legalValidation: Bool
@@ -19,10 +19,12 @@ class Business {
     var reviews = [Review]()
     
     
-    init(name: String, tags: [String], sectors: [String],legalValidation: Bool,city: String, state: String, reviews:[Review], price: String, description: String){
+    init(name: String, sector: String, tags: [String], services: [String] ,legalValidation: Bool, city: String, state: String, reviews:[Review], price: String, description: String){
+        self.name = name
         self.location = Location(city: city, state: state)
         self.tags = tags
-        self.sectors = sectors
+        self.services = services
+        self.sector = sector
         self.reviews = reviews
         self.legalValidation = legalValidation
         self.price = price

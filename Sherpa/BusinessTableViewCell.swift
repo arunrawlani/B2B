@@ -12,6 +12,7 @@ class BusinessTableViewCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var servicesLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         

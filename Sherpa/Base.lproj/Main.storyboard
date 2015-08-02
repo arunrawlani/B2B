@@ -51,7 +51,7 @@
                                 <rect key="frame" x="0.0" y="166" width="600" height="434"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="Alc-7t-BgE">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="121" id="Alc-7t-BgE" customClass="BusinessTableViewCell" customModule="Sherpa" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Alc-7t-BgE" id="6WS-ZS-Jgf">
@@ -94,6 +94,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.028847483407079655" green="0.028847483407079655" blue="0.028847483407079655" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="locationLabel" destination="j5b-Rn-ftY" id="gtl-cJ-1Ur"/>
+                                            <outlet property="nameLabel" destination="Hd6-lh-MiB" id="4NS-L9-csq"/>
+                                            <outlet property="priceLabel" destination="ku2-qX-bjb" id="p4e-IT-IKV"/>
+                                            <outlet property="servicesLabel" destination="NbS-ey-3ku" id="uyY-I0-vKt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

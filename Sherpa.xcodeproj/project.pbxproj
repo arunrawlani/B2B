@@ -189,6 +189,7 @@
 				289F977D1B6DE01300BB7304 /* BusinessReviewsViewController.swift */,
 				289F97821B6DFDF800BB7304 /* BusinessSectorsViewController.swift */,
 				289F97841B6E007000BB7304 /* BusinessSectorTableViewCell.swift */,
+				15E23AF11B6DE09E005DA49F /* MainTimeLineViewController.swift */,
 			);
 			name = "B2B View Controllers";
 			sourceTree = "<group>";
@@ -231,7 +232,6 @@
 				F1EEC4571B5F3386008A04CF /* Helper */,
 				659895AC1B5B248500607B5E /* Data Models */,
 				659F00441B5ADECE00E4267B /* AppDelegate.swift */,
-				15E23AF11B6DE09E005DA49F /* MainTimeLineViewController.swift */,
 				F1D2835C1B615D1D000E1BD4 /* OptionViewController.swift */,
 				A49B61321B5B9E0D00F81B3D /* CallViewController.swift */,
 				659F00481B5ADECE00E4267B /* Main.storyboard */,
