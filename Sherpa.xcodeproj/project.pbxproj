@@ -13,7 +13,6 @@
 		15E23AF01B6DA9B2005DA49F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E23AEC1B6DA9B2005DA49F /* Service.swift */; };
 		47C9F46BB5D6332375F285EB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDF4AD90058FF2F009FC4F2 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		659895AE1B5B249400607B5E /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659895AD1B5B249400607B5E /* Tour.swift */; };
-		659895B01B5B253600607B5E /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659895AF1B5B253600607B5E /* Review.swift */; };
 		659895B21B5B270E00607B5E /* Netwerker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659895B11B5B270E00607B5E /* Netwerker.swift */; };
 		659895B41B5B989F00607B5E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659895B31B5B989F00607B5E /* LoginViewController.swift */; };
 		659F00451B5ADECE00E4267B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F00441B5ADECE00E4267B /* AppDelegate.swift */; };
@@ -71,7 +70,6 @@
 		2FDF4AD90058FF2F009FC4F2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		446762A846708892DC51486B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		659895AD1B5B249400607B5E /* Tour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
-		659895AF1B5B253600607B5E /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		659895B11B5B270E00607B5E /* Netwerker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Netwerker.swift; sourceTree = "<group>"; };
 		659895B31B5B989F00607B5E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		659F003F1B5ADECE00E4267B /* Sherpa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sherpa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				659895AD1B5B249400607B5E /* Tour.swift */,
-				659895AF1B5B253600607B5E /* Review.swift */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -440,7 +437,6 @@
 				659895B41B5B989F00607B5E /* LoginViewController.swift in Sources */,
 				15E23AF01B6DA9B2005DA49F /* Service.swift in Sources */,
 				659895AE1B5B249400607B5E /* Tour.swift in Sources */,
-				659895B01B5B253600607B5E /* Review.swift in Sources */,
 				F1EEC4591B5F339F008A04CF /* ErrorHandling.swift in Sources */,
 				E2A3444E1B5B370F004CAF3A /* ToursTableCell.swift in Sources */,
 				F10E8D831B693A790037E340 /* ReserveViewController.swift in Sources */,
