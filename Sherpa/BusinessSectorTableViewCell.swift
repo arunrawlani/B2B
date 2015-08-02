@@ -1,21 +1,17 @@
 //
-//  BusinessTableViewCell.swift
+//  BusinessSectorTableViewCell.swift
 //  Sherpa
 //
-//  Created by Amit Mondal on 8/1/15.
+//  Created by Amit Mondal on 8/2/15.
 //  Copyright (c) 2015 Derek Argueta. All rights reserved.
 //
 
 import UIKit
 
-class BusinessTableViewCell: UITableViewCell {
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var servicesLabel: UILabel!
-    @IBOutlet var locationLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+class BusinessSectorTableViewCell: UITableViewCell {
+    @IBOutlet var sectorNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         // Initialization code
     }
 

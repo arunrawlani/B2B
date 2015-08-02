@@ -40,8 +40,8 @@ class StaticHelperMethods {
         return false
     }
     
-    static func getBusiness () -> [Business]{
+    /*static func getBusiness () -> [Business]{
         var business = BusinessListViewController()
         return business.businesses
-    }
+    }*/
 }
