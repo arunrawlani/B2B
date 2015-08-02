@@ -17,10 +17,11 @@ class DataExplore {
             self.heading = heading
         }
     }
+    //TODO Write names of images of 2 cells
     let places = [
-        Entry(fname: "NewYork", heading: "New York City"),
-        Entry(fname: "LasVegas", heading: "Las Vegas"),
-        Entry(fname: "LosAngeles", heading: "Los Angeles")
+        Entry(fname: "NewYork", heading: "Services"),
+        Entry(fname: "LasVegas", heading: "Supplies"),
+        
     ]
 }
 
