@@ -22,8 +22,27 @@ class MainTimeLineViewController: UIViewController {
         self.searchRadius = round((sender.value * 3500))
         distanceRadiusLabel.text = ("\(self.searchRadius) Miles")
         self.newNewArray = newArray.filter { (T: Business) -> Bool in
-            return T.location.isInRange(Double(self.searchRadius) * 1609.34)
+            let boolLocation =  T.location.isInRange(Double(self.searchRadius) * 1609.34)
+            var searchBool = true
+
+            if self.searchBar.text != ""{
+            let string = self.searchBar.text
+            var nameBool = false
+            if  T.name.lowercaseString.rangeOfString(string) != nil{
+                nameBool = true
+            }
+            
+            if nameBool ||  self.foundTag(string, objectTags: T.tags) || self.checkServices(T, serviceToBeSearched: string ){
+                searchBool = true
+            } else {
+                searchBool = false
+                }
+            }
+            
+                        // Do any additional setup after loading the view.
+            return searchBool && boolLocation
         }
+
         self.tableView.reloadData()
     }
     //TODO make sure the previous VC assigns string to next var
@@ -129,10 +148,15 @@ extension MainTimeLineViewController: UISearchBarDelegate {
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         let string = searchBar.text
+        if !string.isEmpty{
         var temp = newArray.filter{(T:Business) -> Bool in
             // checking it is not nil
+            var nameBool = false
+            if  T.name.lowercaseString.rangeOfString(string) != nil{
+                nameBool = true
+            }
             
-            if T.name == string ||  self.foundTag(string, objectTags: T.tags) || self.checkSector(T, sector: string ){
+            if nameBool ||  self.foundTag(string, objectTags: T.tags) || self.checkServices(T, serviceToBeSearched: string ){
                 return true
             }
             
@@ -140,6 +164,8 @@ extension MainTimeLineViewController: UISearchBarDelegate {
             // Do any additional setup after loading the view.
         }
         self.newNewArray = temp
+        }
+        self.tableView.reloadData()
         
     }
 
@@ -148,18 +174,19 @@ extension MainTimeLineViewController: UISearchBarDelegate {
 private func foundTag(tags: String, objectTags: [String]) -> Bool {
     // TODO Use better comparison
         for objectTag in objectTags {
-            if tags == objectTag{
+            if objectTag.lowercaseString.rangeOfString(tags) != nil{
                 return true
              }
         
     }
     return false
 }
-private func checkSector(T: Business, sector:String) -> Bool{
-
-            if sector == T.sector{
+private func checkServices(T: Business, serviceToBeSearched:String) -> Bool{
+    for service in T.services {
+            if service.lowercaseString.rangeOfString(serviceToBeSearched) != nil{
                 return true
             }
+    }
     return false
 }
 
