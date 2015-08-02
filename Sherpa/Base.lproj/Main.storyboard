@@ -139,6 +139,7 @@
                     </view>
                     <connections>
                         <outlet property="distanceRadiusLabel" destination="q2R-Ae-yUQ" id="qgk-eV-cHz"/>
+                        <outlet property="searchBar" destination="n7F-Rb-DgU" id="2kw-0I-f3T"/>
                         <outlet property="tableView" destination="8Ge-69-tws" id="nOb-e5-kpe"/>
                         <segue destination="G8P-6K-jD2" kind="show" id="7J2-EZ-3RU"/>
                     </connections>

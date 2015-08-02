@@ -35,6 +35,7 @@ class MainTimeLineViewController: UIViewController {
         for business in allBusinesses {
             business.location.assignLocation()
         }
+        self.searchBar.delegate = self
         self.tableView.dataSource = self
         newArray =  allBusinesses.filter { (T:Business) -> Bool in
             // checking it is not nil
@@ -124,23 +125,26 @@ extension MainTimeLineViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         let string = searchBar.text
         var temp = newArray.filter{(T:Business) -> Bool in
             // checking it is not nil
             
-                if T.name == string ||  self.foundTag(string, objectTags: T.tags) || self.checkSector(T, sector: string ){
-                    return true
-                }
+            if T.name == string ||  self.foundTag(string, objectTags: T.tags) || self.checkSector(T, sector: string ){
+                return true
+            }
             
             return false
             // Do any additional setup after loading the view.
         }
-    self.newNewArray = temp
+        self.newNewArray = temp
         
     }
+
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-    }
+
 private func foundTag(tags: String, objectTags: [String]) -> Bool {
     // TODO Use better comparison
         for objectTag in objectTags {
