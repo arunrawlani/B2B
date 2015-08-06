@@ -20,15 +20,12 @@
 		289F97831B6DFDF800BB7304 /* BusinessSectorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289F97821B6DFDF800BB7304 /* BusinessSectorsViewController.swift */; };
 		289F97851B6E007000BB7304 /* BusinessSectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289F97841B6E007000BB7304 /* BusinessSectorTableViewCell.swift */; };
 		47C9F46BB5D6332375F285EB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDF4AD90058FF2F009FC4F2 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		659895AE1B5B249400607B5E /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659895AD1B5B249400607B5E /* Tour.swift */; };
-		659895B21B5B270E00607B5E /* Netwerker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659895B11B5B270E00607B5E /* Netwerker.swift */; };
 		659895B41B5B989F00607B5E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659895B31B5B989F00607B5E /* LoginViewController.swift */; };
 		659F00451B5ADECE00E4267B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F00441B5ADECE00E4267B /* AppDelegate.swift */; };
 		659F004A1B5ADECE00E4267B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659F00481B5ADECE00E4267B /* Main.storyboard */; };
 		659F004C1B5ADECE00E4267B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659F004B1B5ADECE00E4267B /* Images.xcassets */; };
 		659F004F1B5ADECE00E4267B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659F004D1B5ADECE00E4267B /* LaunchScreen.xib */; };
-		659F005B1B5ADECE00E4267B /* SherpaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F005A1B5ADECE00E4267B /* SherpaTests.swift */; };
-		A49B61331B5B9E0D00F81B3D /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49B61321B5B9E0D00F81B3D /* CallViewController.swift */; };
+		659F005B1B5ADECE00E4267B /* BizCollabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F005A1B5ADECE00E4267B /* BizCollabTests.swift */; };
 		A4E6BEE71B5B7E2600F1D0A1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E6BEE61B5B7E2600F1D0A1 /* Security.framework */; };
 		A4E6BEE91B5B7E4F00F1D0A1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E6BEE81B5B7E4F00F1D0A1 /* AVFoundation.framework */; };
 		A4E6BEEB1B5B80F900F1D0A1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E6BEEA1B5B80F900F1D0A1 /* AudioToolbox.framework */; };
@@ -36,11 +33,8 @@
 		E2A344421B5B053C004CAF3A /* TableViewForExplore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A344411B5B053C004CAF3A /* TableViewForExplore.swift */; };
 		E2A344441B5B0550004CAF3A /* ExploreTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A344431B5B0550004CAF3A /* ExploreTableCell.swift */; };
 		E2A3444A1B5B22E8004CAF3A /* DashboardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A344491B5B22E8004CAF3A /* DashboardTableCell.swift */; };
-		E2A3444C1B5B3140004CAF3A /* ToursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A3444B1B5B3140004CAF3A /* ToursViewController.swift */; };
-		E2A3444E1B5B370F004CAF3A /* ToursTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A3444D1B5B370F004CAF3A /* ToursTableCell.swift */; };
+		E2A3444E1B5B370F004CAF3A /* BizTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A3444D1B5B370F004CAF3A /* BizTableCell.swift */; };
 		E2A344541B5B6648004CAF3A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A344531B5B6648004CAF3A /* DashboardViewController.swift */; };
-		E2A3445A1B5C21CA004CAF3A /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A344591B5C21CA004CAF3A /* TimelineViewController.swift */; };
-		E2A3445C1B5C25F8004CAF3A /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2A3445B1B5C25F8004CAF3A /* incoming.wav */; };
 		F10E8D831B693A790037E340 /* ReserveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10E8D821B693A790037E340 /* ReserveViewController.swift */; };
 		F1D2835D1B615D1D000E1BD4 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2835C1B615D1D000E1BD4 /* OptionViewController.swift */; };
 		F1EEC4501B5F06B4008A04CF /* ParseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EEC44F1B5F06B4008A04CF /* ParseLoginHelper.swift */; };
@@ -85,19 +79,16 @@
 		289F97841B6E007000BB7304 /* BusinessSectorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessSectorTableViewCell.swift; sourceTree = "<group>"; };
 		2FDF4AD90058FF2F009FC4F2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		446762A846708892DC51486B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		659895AD1B5B249400607B5E /* Tour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
-		659895B11B5B270E00607B5E /* Netwerker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Netwerker.swift; sourceTree = "<group>"; };
 		659895B31B5B989F00607B5E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		659F003F1B5ADECE00E4267B /* Sherpa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sherpa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		659F003F1B5ADECE00E4267B /* BizCollab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizCollab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		659F00431B5ADECE00E4267B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		659F00441B5ADECE00E4267B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		659F00491B5ADECE00E4267B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		659F004B1B5ADECE00E4267B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		659F004E1B5ADECE00E4267B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		659F00541B5ADECE00E4267B /* SherpaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SherpaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		659F00541B5ADECE00E4267B /* BizCollabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BizCollabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		659F00591B5ADECE00E4267B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		659F005A1B5ADECE00E4267B /* SherpaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SherpaTests.swift; sourceTree = "<group>"; };
-		A49B61321B5B9E0D00F81B3D /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
+		659F005A1B5ADECE00E4267B /* BizCollabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizCollabTests.swift; sourceTree = "<group>"; };
 		A4E6BEE61B5B7E2600F1D0A1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A4E6BEE81B5B7E4F00F1D0A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A4E6BEEA1B5B80F900F1D0A1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -105,12 +96,9 @@
 		E2A344411B5B053C004CAF3A /* TableViewForExplore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewForExplore.swift; sourceTree = "<group>"; };
 		E2A344431B5B0550004CAF3A /* ExploreTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreTableCell.swift; sourceTree = "<group>"; };
 		E2A344491B5B22E8004CAF3A /* DashboardTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableCell.swift; sourceTree = "<group>"; };
-		E2A3444B1B5B3140004CAF3A /* ToursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToursViewController.swift; sourceTree = "<group>"; };
-		E2A3444D1B5B370F004CAF3A /* ToursTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToursTableCell.swift; sourceTree = "<group>"; };
+		E2A3444D1B5B370F004CAF3A /* BizTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BizTableCell.swift; sourceTree = "<group>"; };
 		E2A344531B5B6648004CAF3A /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		E2A344591B5C21CA004CAF3A /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
-		E2A3445B1B5C25F8004CAF3A /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incoming.wav; sourceTree = "<group>"; };
-		F10E8D821B693A790037E340 /* ReserveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveViewController.swift; sourceTree = "<group>"; };
+		F10E8D821B693A790037E340 /* ReserveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ReserveViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F1D2835C1B615D1D000E1BD4 /* OptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		F1EEC44C1B5EF4FF008A04CF /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		F1EEC44F1B5F06B4008A04CF /* ParseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoginHelper.swift; sourceTree = "<group>"; };
@@ -194,19 +182,11 @@
 			name = "B2B View Controllers";
 			sourceTree = "<group>";
 		};
-		659895AC1B5B248500607B5E /* Data Models */ = {
-			isa = PBXGroup;
-			children = (
-				659895AD1B5B249400607B5E /* Tour.swift */,
-			);
-			name = "Data Models";
-			sourceTree = "<group>";
-		};
 		659F00361B5ADECE00E4267B = {
 			isa = PBXGroup;
 			children = (
-				659F00411B5ADECE00E4267B /* Sherpa */,
-				659F00571B5ADECE00E4267B /* SherpaTests */,
+				659F00411B5ADECE00E4267B /* BizCollab */,
+				659F00571B5ADECE00E4267B /* BizCollabTests */,
 				659F00401B5ADECE00E4267B /* Products */,
 				09F94F2278F539BB0D25A8B0 /* Pods */,
 				F3F325134F7855C435F574E4 /* Frameworks */,
@@ -216,34 +196,29 @@
 		659F00401B5ADECE00E4267B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				659F003F1B5ADECE00E4267B /* Sherpa.app */,
-				659F00541B5ADECE00E4267B /* SherpaTests.xctest */,
+				659F003F1B5ADECE00E4267B /* BizCollab.app */,
+				659F00541B5ADECE00E4267B /* BizCollabTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		659F00411B5ADECE00E4267B /* Sherpa */ = {
+		659F00411B5ADECE00E4267B /* BizCollab */ = {
 			isa = PBXGroup;
 			children = (
 				289F97811B6DE97200BB7304 /* B2B View Controllers */,
 				288EDE531B6DB73A00628862 /* BusinessTableViewCell.swift */,
 				288EDE541B6DB73A00628862 /* BusinessListViewController.swift */,
 				F1EEC4571B5F3386008A04CF /* Helper */,
-				659895AC1B5B248500607B5E /* Data Models */,
 				659F00441B5ADECE00E4267B /* AppDelegate.swift */,
 				F1D2835C1B615D1D000E1BD4 /* OptionViewController.swift */,
-				A49B61321B5B9E0D00F81B3D /* CallViewController.swift */,
 				659F00481B5ADECE00E4267B /* Main.storyboard */,
 				F1EEC44F1B5F06B4008A04CF /* ParseLoginHelper.swift */,
 				659895B31B5B989F00607B5E /* LoginViewController.swift */,
 				F1EEC45A1B5FFA8E008A04CF /* SignUpViewController.swift */,
 				15E23AF71B6DF358005DA49F /* StaticHelperMethods.swift */,
 				F10E8D821B693A790037E340 /* ReserveViewController.swift */,
-				E2A3444B1B5B3140004CAF3A /* ToursViewController.swift */,
-				E2A344591B5C21CA004CAF3A /* TimelineViewController.swift */,
-				E2A3445B1B5C25F8004CAF3A /* incoming.wav */,
 				E2A344531B5B6648004CAF3A /* DashboardViewController.swift */,
-				E2A3444D1B5B370F004CAF3A /* ToursTableCell.swift */,
+				E2A3444D1B5B370F004CAF3A /* BizTableCell.swift */,
 				659F004B1B5ADECE00E4267B /* Images.xcassets */,
 				E2A344411B5B053C004CAF3A /* TableViewForExplore.swift */,
 				E2A344491B5B22E8004CAF3A /* DashboardTableCell.swift */,
@@ -251,8 +226,8 @@
 				E2A344431B5B0550004CAF3A /* ExploreTableCell.swift */,
 				659F004D1B5ADECE00E4267B /* LaunchScreen.xib */,
 				659F00421B5ADECE00E4267B /* Supporting Files */,
-				659895B11B5B270E00607B5E /* Netwerker.swift */,
 			);
+			name = BizCollab;
 			path = Sherpa;
 			sourceTree = "<group>";
 		};
@@ -265,12 +240,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		659F00571B5ADECE00E4267B /* SherpaTests */ = {
+		659F00571B5ADECE00E4267B /* BizCollabTests */ = {
 			isa = PBXGroup;
 			children = (
-				659F005A1B5ADECE00E4267B /* SherpaTests.swift */,
+				659F005A1B5ADECE00E4267B /* BizCollabTests.swift */,
 				659F00581B5ADECE00E4267B /* Supporting Files */,
 			);
+			name = BizCollabTests;
 			path = SherpaTests;
 			sourceTree = "<group>";
 		};
@@ -316,9 +292,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		659F003E1B5ADECE00E4267B /* Sherpa */ = {
+		659F003E1B5ADECE00E4267B /* BizCollab */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 659F005E1B5ADECE00E4267B /* Build configuration list for PBXNativeTarget "Sherpa" */;
+			buildConfigurationList = 659F005E1B5ADECE00E4267B /* Build configuration list for PBXNativeTarget "BizCollab" */;
 			buildPhases = (
 				DB6B0D8E2429B781ADCBAE99 /* Check Pods Manifest.lock */,
 				659F003B1B5ADECE00E4267B /* Sources */,
@@ -331,14 +307,14 @@
 			);
 			dependencies = (
 			);
-			name = Sherpa;
+			name = BizCollab;
 			productName = Sherpa;
-			productReference = 659F003F1B5ADECE00E4267B /* Sherpa.app */;
+			productReference = 659F003F1B5ADECE00E4267B /* BizCollab.app */;
 			productType = "com.apple.product-type.application";
 		};
-		659F00531B5ADECE00E4267B /* SherpaTests */ = {
+		659F00531B5ADECE00E4267B /* BizCollabTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 659F00611B5ADECE00E4267B /* Build configuration list for PBXNativeTarget "SherpaTests" */;
+			buildConfigurationList = 659F00611B5ADECE00E4267B /* Build configuration list for PBXNativeTarget "BizCollabTests" */;
 			buildPhases = (
 				659F00501B5ADECE00E4267B /* Sources */,
 				659F00511B5ADECE00E4267B /* Frameworks */,
@@ -349,9 +325,9 @@
 			dependencies = (
 				659F00561B5ADECE00E4267B /* PBXTargetDependency */,
 			);
-			name = SherpaTests;
+			name = BizCollabTests;
 			productName = SherpaTests;
-			productReference = 659F00541B5ADECE00E4267B /* SherpaTests.xctest */;
+			productReference = 659F00541B5ADECE00E4267B /* BizCollabTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -361,10 +337,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
-				ORGANIZATIONNAME = "Derek Argueta";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					659F003E1B5ADECE00E4267B = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = WK3VAH28UA;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					659F00531B5ADECE00E4267B = {
 						CreatedOnToolsVersion = 6.4;
@@ -372,7 +354,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 659F003A1B5ADECE00E4267B /* Build configuration list for PBXProject "Sherpa" */;
+			buildConfigurationList = 659F003A1B5ADECE00E4267B /* Build configuration list for PBXProject "BizCollab" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -385,8 +367,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				659F003E1B5ADECE00E4267B /* Sherpa */,
-				659F00531B5ADECE00E4267B /* SherpaTests */,
+				659F003E1B5ADECE00E4267B /* BizCollab */,
+				659F00531B5ADECE00E4267B /* BizCollabTests */,
 			);
 		};
 /* End PBXProject section */
@@ -396,7 +378,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A3445C1B5C25F8004CAF3A /* incoming.wav in Resources */,
 				659F004A1B5ADECE00E4267B /* Main.storyboard in Resources */,
 				659F004F1B5ADECE00E4267B /* LaunchScreen.xib in Resources */,
 				659F004C1B5ADECE00E4267B /* Images.xcassets in Resources */,
@@ -469,12 +450,10 @@
 				289F977E1B6DE01300BB7304 /* BusinessReviewsViewController.swift in Sources */,
 				15E23AF01B6DA9B2005DA49F /* Service.swift in Sources */,
 				15E23AF21B6DE09E005DA49F /* MainTimeLineViewController.swift in Sources */,
-				659895AE1B5B249400607B5E /* Tour.swift in Sources */,
 				F1EEC4591B5F339F008A04CF /* ErrorHandling.swift in Sources */,
 				289F97801B6DE94200BB7304 /* BusinessInformationViewController.swift in Sources */,
-				E2A3444E1B5B370F004CAF3A /* ToursTableCell.swift in Sources */,
+				E2A3444E1B5B370F004CAF3A /* BizTableCell.swift in Sources */,
 				F10E8D831B693A790037E340 /* ReserveViewController.swift in Sources */,
-				659895B21B5B270E00607B5E /* Netwerker.swift in Sources */,
 				F1EEC45B1B5FFA8E008A04CF /* SignUpViewController.swift in Sources */,
 				F1EEC4501B5F06B4008A04CF /* ParseLoginHelper.swift in Sources */,
 				15E23AF81B6DF358005DA49F /* StaticHelperMethods.swift in Sources */,
@@ -484,16 +463,13 @@
 				289F97831B6DFDF800BB7304 /* BusinessSectorsViewController.swift in Sources */,
 				E2A344541B5B6648004CAF3A /* DashboardViewController.swift in Sources */,
 				288EDE561B6DB73A00628862 /* BusinessListViewController.swift in Sources */,
-				E2A3444C1B5B3140004CAF3A /* ToursViewController.swift in Sources */,
 				15E23AEE1B6DA9B2005DA49F /* Location.swift in Sources */,
 				15E23AED1B6DA9B2005DA49F /* Business.swift in Sources */,
 				E2A344401B5B0516004CAF3A /* AppData.swift in Sources */,
-				A49B61331B5B9E0D00F81B3D /* CallViewController.swift in Sources */,
 				15E23AEF1B6DA9B2005DA49F /* Review.swift in Sources */,
 				E2A3444A1B5B22E8004CAF3A /* DashboardTableCell.swift in Sources */,
 				288EDE551B6DB73A00628862 /* BusinessTableViewCell.swift in Sources */,
 				659F00451B5ADECE00E4267B /* AppDelegate.swift in Sources */,
-				E2A3445A1B5C21CA004CAF3A /* TimelineViewController.swift in Sources */,
 				F1D2835D1B615D1D000E1BD4 /* OptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,7 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				659F005B1B5ADECE00E4267B /* SherpaTests.swift in Sources */,
+				659F005B1B5ADECE00E4267B /* BizCollabTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +487,7 @@
 /* Begin PBXTargetDependency section */
 		659F00561B5ADECE00E4267B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 659F003E1B5ADECE00E4267B /* Sherpa */;
+			target = 659F003E1B5ADECE00E4267B /* BizCollab */;
 			targetProxy = 659F00551B5ADECE00E4267B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -627,7 +603,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Sherpa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BizCollab;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Sherpa/BridgeHeader.h;
 			};
@@ -646,7 +622,7 @@
 				);
 				INFOPLIST_FILE = Sherpa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BizCollab;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Sherpa/BridgeHeader.h;
 			};
@@ -666,7 +642,7 @@
 				);
 				INFOPLIST_FILE = SherpaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BizCollabTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sherpa.app/Sherpa";
 			};
 			name = Debug;
@@ -681,7 +657,7 @@
 				);
 				INFOPLIST_FILE = SherpaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BizCollabTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sherpa.app/Sherpa";
 			};
 			name = Release;
@@ -689,7 +665,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		659F003A1B5ADECE00E4267B /* Build configuration list for PBXProject "Sherpa" */ = {
+		659F003A1B5ADECE00E4267B /* Build configuration list for PBXProject "BizCollab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				659F005C1B5ADECE00E4267B /* Debug */,
@@ -698,7 +674,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		659F005E1B5ADECE00E4267B /* Build configuration list for PBXNativeTarget "Sherpa" */ = {
+		659F005E1B5ADECE00E4267B /* Build configuration list for PBXNativeTarget "BizCollab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				659F005F1B5ADECE00E4267B /* Debug */,
@@ -707,7 +683,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		659F00611B5ADECE00E4267B /* Build configuration list for PBXNativeTarget "SherpaTests" */ = {
+		659F00611B5ADECE00E4267B /* Build configuration list for PBXNativeTarget "BizCollabTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				659F00621B5ADECE00E4267B /* Debug */,

@@ -1,10 +1,3 @@
-//
-//  BusinessListViewController.swift
-//  Sherpa
-//
-//  Created by Amit Mondal on 8/1/15.
-//  Copyright (c) 2015 Derek Argueta. All rights reserved.
-//
 
 import UIKit
 

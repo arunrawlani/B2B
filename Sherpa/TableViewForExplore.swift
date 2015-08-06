@@ -1,10 +1,4 @@
-//
-//  TableViewForExplore.swift
-//  Sherpa
-//
-//  Created by Akhil Nadendla on 7/18/15.
-//  Copyright (c) 2015 Akhil Nadendla. All rights reserved.
-//
+
 import UIKit
 import Parse
 
@@ -18,15 +12,8 @@ class TableViewForExplore: UITableViewController, explore {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.createSinchClient(PFUser.currentUser()!.objectId!)
 
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     // MARK: - Table view data source
@@ -57,9 +44,7 @@ class TableViewForExplore: UITableViewController, explore {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToBusiness" {
             let secondVC = segue.destinationViewController as! BusinessSectorsViewController
-            //secondVC.mainCityLabelText = textOfCity
-            //secondVC.mainGraphicImageFileName = imageOfCity
-            //secondVC.citySelected = city
+ 
         }
 
     }
@@ -67,6 +52,6 @@ class TableViewForExplore: UITableViewController, explore {
         textOfCity = cityLabel
         imageOfCity = imageFilename
         city = selectedCity
-        performSegueWithIdentifier("goToTours", sender: self)
+        performSegueWithIdentifier("goToSector", sender: self)
     }
 }

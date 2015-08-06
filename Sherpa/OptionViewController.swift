@@ -1,10 +1,3 @@
-//
-//  OptionController.swift
-//  Sherpa
-//
-//  Created by Praynaa Rawlani on 7/23/15.
-//  Copyright (c) 2015 Derek Argueta. All rights reserved.
-//
 
 import Foundation
 import UIKit
@@ -31,14 +24,14 @@ class OptionViewController: UIViewController, PFLogInViewControllerDelegate, PFS
             self.logInViewController.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.SignUpButton | PFLogInFields.PasswordForgotten | PFLogInFields.DismissButton
             
             var logInLogoTitle = UILabel()
-            logInLogoTitle.text = "Sherpa"
+            logInLogoTitle.text = "BizCollab"
             
             self.logInViewController.logInView!.logo = logInLogoTitle
             
             self.logInViewController.delegate = self
             
             var SignUpLogoTitle = UILabel()
-            SignUpLogoTitle.text = "Sherpa"
+            SignUpLogoTitle.text = "BizCollab"
             
             self.signUpViewController.signUpView!.logo = SignUpLogoTitle
             

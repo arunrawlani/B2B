@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "659F003E1B5ADECE00E4267B"
-            BuildableName = "Sherpa.app"
-            BlueprintName = "Sherpa"
-            ReferencedContainer = "container:Sherpa.xcodeproj">
+            BuildableName = "BizCollab.app"
+            BlueprintName = "BizCollab"
+            ReferencedContainer = "container:BizCollab.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "659F003E1B5ADECE00E4267B"
-            BuildableName = "Sherpa.app"
-            BlueprintName = "Sherpa"
-            ReferencedContainer = "container:Sherpa.xcodeproj">
+            BuildableName = "BizCollab.app"
+            BlueprintName = "BizCollab"
+            ReferencedContainer = "container:BizCollab.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

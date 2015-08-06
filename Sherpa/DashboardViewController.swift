@@ -1,10 +1,3 @@
-//
-//  DashboardViewController.swift
-//  Sherpa
-//
-//  Created by Akhil Nadendla on 7/18/15.
-//  Copyright (c) 2015 Akhil Nadendla. All rights reserved.
-//
 
 import UIKit
 
@@ -29,18 +22,18 @@ class DashboardViewController: UIViewController, UITableViewDelegate , UITableVi
     }
   
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.scheduledTours.count
+        return data.scheduledAppointment.count
     }
   
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! DashboardTableCell
         // Configure the cell...
         cell.backgroundColor = UIColor.clearColor()
-        cell.timeLabel.text = data.scheduledTours[indexPath.row].tourTime
-        cell.timeAMPMLabel.text = data.scheduledTours[indexPath.row].tourTimeAmorPM
-        cell.tourNameLabel.text = data.scheduledTours[indexPath.row].tourName
-        cell.tourGuideLabel.text = data.scheduledTours[indexPath.row].tourGuide
-        cell.tourDateLabel.text = data.scheduledTours[indexPath.row].tourDate
+        cell.timeLabel.text = data.scheduledAppointment[indexPath.row].appointmentTime
+        cell.timeAMPMLabel.text = data.scheduledAppointment[indexPath.row].appointmentTimeAmorPM
+        cell.companyNameLabel.text = data.scheduledAppointment[indexPath.row].companyName
+        cell.companyGuideLabel.text = data.scheduledAppointment[indexPath.row].companyGuide
+        cell.appointmentDateLabel.text = data.scheduledAppointment[indexPath.row].appointmentDate
         return cell
     }
 

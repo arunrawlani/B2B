@@ -1,10 +1,4 @@
-//
-//  DashboardTableCell.swift
-//  Sherpa
-//
-//  Created by Akhil Nadendla on 7/18/15.
-//  Copyright (c) 2015 Akhil Nadendla. All rights reserved.
-//
+
 
 import UIKit
 import FBSDKLoginKit
@@ -18,8 +12,8 @@ class DashboardTableCell: UITableViewCell {
     var delegate: dashboard? = nil
     
     @IBOutlet var timeLabel: UILabel!
-    @IBOutlet var tourGuideLabel: UILabel!
-    @IBOutlet var tourDateLabel: UILabel!
-    @IBOutlet var tourNameLabel: UILabel!
+    @IBOutlet var companyGuideLabel: UILabel!
+    @IBOutlet var appointmentDateLabel: UILabel!
+    @IBOutlet var companyNameLabel: UILabel!
     @IBOutlet var timeAMPMLabel: UILabel!    
 }

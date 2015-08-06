@@ -1,10 +1,3 @@
-//
-//  ReserveViewController.swift
-//  Sherpa
-//
-//  Created by Praynaa Rawlani on 7/29/15.
-//  Copyright (c) 2015 Derek Argueta. All rights reserved.
-//
 
 import Foundation
 import AKPickerView_Swift
@@ -34,11 +27,11 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
     var languages = ["Taxation","Legal Consulting","Legal Service"]
     var time = ["9:30", "10:30", "11:30", "12:30", "1:30", "2:30", "3:30"]
     
-     var tourCost: String = "" //costLabel
-     var tourName: String = "" //nameLabel
-     var tourSum: String = "" //sumLabel
-     var tourLang: [String] = [] //pickerView
-     var tourTimes: [String] = [] //timePicker
+     var serviceCost: String = "" //costLabel
+     var companyName: String = "" //nameLabel
+     var serviceSum: String = "" //sumLabel
+     var companyService: [String] = [] //pickerView
+     var appointmentTimes: [String] = [] //timePicker
      var selectedLanguage: String = ""
      var selectedTime: String = ""
    
@@ -101,9 +94,9 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         self.timePicker.maskDisabled = false
         self.timePicker.reloadData()
         
-        //nameLabel.text = tourName
-        //costLabel.text = tourCost
-       // sumLabel.text = tourSum
+        //nameLabel.text = companyName
+        //costLabel.text = serviceCost
+       // sumLabel.text = serviceSum
         
         
         self.selectedLanguage = "None"

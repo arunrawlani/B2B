@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Sherpa
-//
-//  Created by Arun Rawlani on 7/18/15.
-//  Copyright (c) 2015 Arun Rawlani. All rights reserved.
-//
 
 import UIKit
 import Bolts
@@ -16,10 +9,9 @@ import ParseFacebookUtilsV4
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, SINClientDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var client: SINClient?
     var splash: UIImageView?
     var parseLoginHelper: ParseLoginHelper!
     var logInViewController : PFLogInViewController! = PFLogInViewController()
@@ -46,16 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SINClientDelegate{
         } 
     }
 
-    //MARK: Facebook Integration
-    
-    func applicationDidBecomeActive(application: UIApplication) {
-        FBSDKAppEvents.activateApp()
-    }
-    
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
-    }
-    
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
@@ -63,8 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SINClientDelegate{
     Parse.enableLocalDatastore()
         
     // Initialize Parse.
-    Parse.setApplicationId("KFEJJHbSO3nmrKCkslgz9e60ZfqfNukVlocMC2Gg",
-            clientKey: "HFn6jQvQ8rGeJVE5Puwx36o0qYveOnSnEkLKT2gd")
+    Parse.setApplicationId("jVk0BOAqyipNMaNA4jQJOjlg1O1YLZqgZlDS6Lau",
+            clientKey: "sG8pEyIrifxbaF8tODZwKPS4TIwA8iPJtsa8tcgg")
         
    
     //Initialize Facebook (boilerplate code)
@@ -82,19 +64,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SINClientDelegate{
         //If no user, then create a login screen. Allows for some customization, parseLoginHelper as delegate
         else {
             
-            logInViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten | .Facebook 
+            logInViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten
             
             startViewController = logInViewController
             
             var logInLogoTitle = UILabel()
-            logInLogoTitle.text = "Sherpa"
+            logInLogoTitle.text = "BizCollab"
             
             logInViewController.logInView!.logo = logInLogoTitle
             logInViewController.delegate = parseLoginHelper
             
             
             var signUpLogoTitle = UILabel()
-            signUpLogoTitle.text = "Sherpa"
+            signUpLogoTitle.text = "BizCollab"
             signUpViewController.signUpView!.logo = signUpLogoTitle
             
             self.signUpViewController.delegate = parseLoginHelper
@@ -106,19 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SINClientDelegate{
         self.window?.rootViewController = startViewController
         self.window?.makeKeyAndVisible()
     
-    
-   /* ADDED AT HACKATHON
-    application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes:
-    UIUserNotificationType.Sound | UIUserNotificationType.Alert,
-    categories: nil
-    ))
-        
-    if launchOptions != nil {
-        if launchOptions![UIApplicationLaunchOptionsLocalNotificationKey] != nil {
-            handleLocalNotification(launchOptions![UIApplicationLaunchOptionsLocalNotificationKey] as! UILocalNotification)
-        }
-    }
-    */
+
     
     //MARK: Changing the colour of the naviagtion bar
     UINavigationBar.appearance().barTintColor = UIColor(red: 229/255.0, green: 147/255.0, blue: 52/255.0, alpha: 100.0)
@@ -129,54 +99,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SINClientDelegate{
     
 
     return true
-    //return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
-    
-    //MARK: SINCH Integration
-    
-    func createSinchClient(userId: String) {
-        if client == nil {
-            client = Sinch.clientWithApplicationKey("a2bbc056-429c-4ce2-b742-1de024cc1b76", applicationSecret: "VlPqzQgjbkKd+z5KRbDC/w==", environmentHost: "sandbox.sinch.com", userId: userId)
-            
-            client!.setSupportCalling(true)
-            client!.setSupportActiveConnectionInBackground(true)
-            
-            client!.delegate = self
-            
-            client!.start()
-            client!.startListeningOnActiveConnection()
-        }
-    }
-    
-    func clientDidStart(client: SINClient) {
-        NSLog("client did start")
-        println(client.userId)
-    }
-    
-    func clientDidStop(client: SINClient) {
-        NSLog("client did stop")
-    }
-    
-    func clientDidFail(client: SINClient, error: NSError!) {
-        NSLog("client did fail", error.description)
-        let toast = UIAlertView(title: "Failed to start", message: error.description, delegate: nil, cancelButtonTitle: "OK")
-        toast.show()
-    }
 
     
-    func handleLocalNotification(notification: UILocalNotification) {
-        if client != nil {
-            let result: SINNotificationResult = client!.relayLocalNotification(notification)
-            if result.isCall() && (result.callResult().isTimedOut) {
-                let msg = "Missed call from " + result.callResult().remoteUserId
-                let alert = UIAlertView()
-                alert.title = "Missed call"
-                alert.message = msg
-                alert.show()
-            }
-        }
-    }
+
+
     
     func dismissSplashViewIfNecessary() {
         if self.splash != nil {
