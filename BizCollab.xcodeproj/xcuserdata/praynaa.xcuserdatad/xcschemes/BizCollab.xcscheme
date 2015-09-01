@@ -34,6 +34,20 @@
                ReferencedContainer = "container:Sherpa.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "659F003E1B5ADECE00E4267B"
+               BuildableName = "BizCollab.app"
+               BlueprintName = "BizCollab"
+               ReferencedContainer = "container:BizCollab.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
