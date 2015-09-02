@@ -74,7 +74,7 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         
         self.pickerView.font = UIFont(name: "AvenirNext-Medium", size: 17)!
         self.pickerView.textColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 0.5)
-        self.pickerView.highlightedFont = UIFont(name: "AvenirNext-Medium", size: 17)!
+        self.pickerView.highlightedFont = UIFont(name: "AvenirNext-Regular", size: 17)!
         self.pickerView.highlightedTextColor = UIColor(red: 229.0/256.0, green: 147.0/256.0, blue: 52.0/256.0, alpha: 1.0)
         self.pickerView.textColor = UIColor.whiteColor()
         self.pickerView.interitemSpacing = 17.0
