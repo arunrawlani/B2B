@@ -31,6 +31,9 @@ class BusinessSectorsViewController: UIViewController, UITableViewDelegate, UITa
         let cell = tableView.dequeueReusableCellWithIdentifier("SectorCell", forIndexPath: indexPath) as! BusinessSectorTableViewCell
         cell.sectorNameLabel.text = self.sectors[indexPath.row]
         cell.selectionStyle = UITableViewCellSelectionStyle.None
+        //These properties run on only iOS8 and higher so check
+        cell.layoutMargins = UIEdgeInsetsZero;
+        cell.preservesSuperviewLayoutMargins = false
         return cell
     }
     

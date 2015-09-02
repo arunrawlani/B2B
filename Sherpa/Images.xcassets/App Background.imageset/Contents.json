@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "App Background@1x.png"
+      "filename" : "bizCollabBackground.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "App Background@2x.png"
+      "filename" : "bizCollabBackground@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "App Background@3x.png"
+      "filename" : "bizCollabBackground@3x.png"
     }
   ],
   "info" : {

@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Explore Icon x1.png"
+      "filename" : "exploreIcon.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Explore Icon x2.png"
+      "filename" : "exploreIcon@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "Explore Icon 3x.png"
+      "filename" : "exploreIcon@3x.png"
     }
   ],
   "info" : {
