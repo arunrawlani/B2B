@@ -42,8 +42,11 @@ class TableViewForExplore: UITableViewController, explore {
         return cell
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "goToBusiness" {
+        if segue.identifier == "goToSector" {
             let secondVC = segue.destinationViewController as! BusinessSectorsViewController
+            secondVC.mainCityLabelText = textOfCity
+            secondVC.mainGraphicImageFileName = imageOfCity
+            secondVC.optionSelected = city
  
         }
 

@@ -4,10 +4,22 @@ import UIKit
 class BusinessSectorsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var optionLabel: UILabel!
+    @IBOutlet weak var optionImage: UIImageView!
     let sectors: [String] = ["Finance", "Data Analysis", "Marketing", "Development", "Distribution & Retail", "Management"]
+    let services: [String] = ["Distributors","Craftsmen","Dropshippers", "Manufacturers"]
+    var sectionSelected: Int = 0
     var selectedSector: String = ""
+    //Added for now
+    var mainCityLabelText: String = ""
+    var mainGraphicImageFileName: String = ""
+    var optionSelected: Int = 0
+    //close
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("This is \(mainCityLabelText) what")
+        optionLabel.text = mainCityLabelText
+        optionImage.image = UIImage(named: mainGraphicImageFileName)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         // Do any additional setup after loading the view.

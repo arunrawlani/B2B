@@ -255,7 +255,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="serviceImage" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-v6-6nt">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="257"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="264"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Services" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOU-C8-IXd">
                                 <rect key="frame" x="21" y="218" width="223" height="27.5"/>
@@ -265,7 +265,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="109" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vsc-Nq-d1h">
-                                <rect key="frame" x="0.0" y="277" width="600" height="210"/>
+                                <rect key="frame" x="0.0" y="272" width="600" height="215"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="598" id="lZ4-X8-JnJ"/>
@@ -341,7 +341,7 @@
                         <constraints>
                             <constraint firstItem="gVc-v6-6nt" firstAttribute="leading" secondItem="Hps-8b-poX" secondAttribute="leading" id="82i-dP-zYT"/>
                             <constraint firstAttribute="trailing" secondItem="P9f-hN-nKu" secondAttribute="trailing" id="FHI-dG-4Zn"/>
-                            <constraint firstItem="vsc-Nq-d1h" firstAttribute="top" secondItem="gVc-v6-6nt" secondAttribute="bottom" constant="20" id="Ljl-v5-bKu"/>
+                            <constraint firstItem="vsc-Nq-d1h" firstAttribute="top" secondItem="gVc-v6-6nt" secondAttribute="bottom" constant="2" id="Ljl-v5-bKu"/>
                             <constraint firstItem="cSQ-ca-iiD" firstAttribute="top" secondItem="P9f-hN-nKu" secondAttribute="bottom" id="MES-5h-T8z"/>
                             <constraint firstItem="KOU-C8-IXd" firstAttribute="leading" secondItem="Hps-8b-poX" secondAttribute="leadingMargin" constant="5" id="PgP-GN-cTi"/>
                             <constraint firstAttribute="trailing" secondItem="vsc-Nq-d1h" secondAttribute="trailing" id="Qzw-QW-Ac6"/>
@@ -356,6 +356,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sectors" id="vGb-Xb-2ZK"/>
                     <connections>
+                        <outlet property="optionImage" destination="gVc-v6-6nt" id="x8L-XM-tMV"/>
+                        <outlet property="optionLabel" destination="KOU-C8-IXd" id="ScM-uz-guN"/>
                         <outlet property="tableView" destination="vsc-Nq-d1h" id="yaB-VO-LI4"/>
                         <segue destination="lO1-rJ-z3o" kind="show" identifier="goToBusiness" id="w9A-6h-ioP"/>
                     </connections>
