@@ -254,7 +254,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Background" translatesAutoresizingMaskIntoConstraints="NO" id="P9f-hN-nKu">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="serviceImage" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-v6-6nt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="serviceImage" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-v6-6nt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="264"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Services" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOU-C8-IXd">
