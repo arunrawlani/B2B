@@ -15,6 +15,7 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
     @IBOutlet weak var pickerView: AKPickerView!
     @IBOutlet weak var timePicker: AKPickerView!
     
+    @IBOutlet weak var datepicker: UIDatePicker!
     @IBOutlet weak var requestButton: UIButton!
     var requestPressedCounter: Int = 1
     
@@ -75,8 +76,8 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         
         self.pickerView.font = UIFont(name: "AvenirNext-Medium", size: 17)!
         self.pickerView.textColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 0.5)
-        self.pickerView.highlightedFont = UIFont(name: "AvenirNext-Regular", size: 17)!
-        self.pickerView.highlightedTextColor = UIColor(red: 229.0/256.0, green: 147.0/256.0, blue: 52.0/256.0, alpha: 1.0)
+        self.pickerView.highlightedFont = UIFont(name: "AvenirNext-Medium", size: 17)!
+        self.pickerView.highlightedTextColor = UIColor(red: 220.0/256.0, green: 147.0/256.0, blue: 52.0/256.0, alpha: 1.0)
         self.pickerView.textColor = UIColor.whiteColor()
         self.pickerView.interitemSpacing = 17.0
         self.pickerView.viewDepth = 1000.0
@@ -84,10 +85,10 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         self.pickerView.maskDisabled = false
         self.pickerView.reloadData()
         
-        self.timePicker.font = UIFont(name: "AvenirNext-Regular", size: 17)!
-        self.pickerView.textColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 0.5)
-        self.timePicker.highlightedFont = UIFont(name: "AvenirNext-Regular", size: 17)!
-        self.timePicker.highlightedTextColor = UIColor(red: 229.0/256.0, green: 147.0/256.0, blue: 52.0/256.0, alpha: 1.0)
+        self.timePicker.font = UIFont(name: "AvenirNext-Medium", size: 17)!
+        self.timePicker.textColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 0.5)
+        self.timePicker.highlightedFont = UIFont(name: "AvenirNext-Medium", size: 17)!
+        self.timePicker.highlightedTextColor = UIColor(red: 220.0/256.0, green: 147.0/256.0, blue: 52.0/256.0, alpha: 1.0)
         self.timePicker.textColor = UIColor.whiteColor()
         self.timePicker.interitemSpacing = 17.0
         self.timePicker.viewDepth = 1000.0
@@ -95,9 +96,15 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         self.timePicker.maskDisabled = false
         self.timePicker.reloadData()
         
+        
+        let currentDate = NSDate() //fetches current date
+        datepicker.minimumDate = currentDate //makes current date to be minimum
+        datepicker.date = currentDate //defaults to current date
+
         //nameLabel.text = companyName
         //costLabel.text = serviceCost
        // sumLabel.text = serviceSum
+        
         
         
         self.selectedLanguage = "None"
