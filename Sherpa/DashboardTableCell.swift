@@ -16,4 +16,5 @@ class DashboardTableCell: UITableViewCell {
     @IBOutlet var appointmentDateLabel: UILabel!
     @IBOutlet var companyNameLabel: UILabel!
     @IBOutlet var timeAMPMLabel: UILabel!    
+    @IBOutlet weak var cancelButton: UIButton!
 }

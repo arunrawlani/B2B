@@ -18,7 +18,7 @@ class Appointment:PFObject, PFSubclassing{
     @NSManaged var requestedTime: String?
     @NSManaged var requestedService: String?
     @NSManaged var requestedDate: String?
-    @NSManaged var toBiz: PFUser?
+    @NSManaged var toBiz: String?
     
     
     //MARK : PFSubclassing Protocol
