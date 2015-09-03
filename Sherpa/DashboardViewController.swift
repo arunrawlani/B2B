@@ -79,6 +79,7 @@ extension DashboardViewController: UITableViewDataSource{
         cell.companyNameLabel.text = appointments[indexPath.row].toBiz
         cell.companyGuideLabel.text = "Pending"
         cell.appointmentDateLabel.text = appointments[indexPath.row].requestedService
+        cell.cancelButton.hidden = true
         //Can crash in below iOS8
         cell.layoutMargins = UIEdgeInsetsZero;
         cell.preservesSuperviewLayoutMargins = false
