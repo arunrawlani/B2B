@@ -22,15 +22,15 @@ class DashboardViewController: UIViewController{
         let appointmentQuery = Appointment.query()
         appointmentQuery!.whereKey("fromBiz", equalTo: PFUser.currentUser()!)
         
-     /*   if let appointmentQuery = appointmentQuery{
+        if let appointmentQuery = appointmentQuery{
             isCancelledQuery = PFQuery.orQueryWithSubqueries([appointmentQuery])
             isCancelledQuery!.whereKey("isCancelled", equalTo: false)
             
-            isCancelledQuery!.includeKey("toBiz")
-            isCancelledQuery!.includeKey("fromBiz")
-        } */
+           // isCancelledQuery!.includeKey("toBiz") //dont need as both of them are Strings for now
+            //isCancelledQuery!.includeKey("fromBiz") //dont need as both of them are Strings for now
+        }
         
-        appointmentQuery!.findObjectsInBackgroundWithBlock {(result: [AnyObject]?, error: NSError?) -> Void in
+        isCancelledQuery!.findObjectsInBackgroundWithBlock {(result: [AnyObject]?, error: NSError?) -> Void in
             
             self.appointments = result as? [Appointment] ?? []
             println("This is \(self.appointments.count)")
@@ -79,6 +79,7 @@ extension DashboardViewController: UITableViewDataSource{
         cell.companyNameLabel.text = appointments[indexPath.row].toBiz
         cell.companyGuideLabel.text = "Pending"
         cell.appointmentDateLabel.text = appointments[indexPath.row].requestedService
+        //Can crash in below iOS8
         cell.layoutMargins = UIEdgeInsetsZero;
         cell.preservesSuperviewLayoutMargins = false
         return cell
