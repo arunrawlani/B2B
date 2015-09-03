@@ -182,7 +182,7 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
     @IBAction func appointmentRequest(sender: UIButton) {
         if (self.selectedLanguage == "None" || self.selectedTime == "None"){
             //GIVES AN ERROR MESSAGE
-            var alert = UIAlertController(title: "Incomplete Request!", message: "Please select a time and service", preferredStyle: .Alert)
+            var alert = UIAlertController(title: "Incomplete Request!", message: "Please select a time and service.", preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "OK", style: .Default){ (action) in
                 //...
             }
@@ -207,7 +207,7 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
             
             appointment.saveInBackgroundWithBlock{(success: Bool, error: NSError?) -> Void in
                 if (success){
-                    var alert = UIAlertController(title: "Request Sent!", message: "All scheduled appoitments will be displayed on the Dashboard. ", preferredStyle: .Alert)
+                    var alert = UIAlertController(title: "Request Sent!", message: "All scheduled appointments will be displayed on the Dashboard. ", preferredStyle: .Alert)
                     let OKAction = UIAlertAction(title: "OK", style: .Default){ (action) in
                         //...
                         self.navigationController?.popToRootViewControllerAnimated(true)
