@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var parseLoginHelper: ParseLoginHelper!
     var logInViewController : PFLogInViewController! = PFLogInViewController()
     var signUpViewController: PFSignUpViewController! = PFSignUpViewController()
+    var requestSubmitted: Bool = false
     
     override init(){
         super.init()

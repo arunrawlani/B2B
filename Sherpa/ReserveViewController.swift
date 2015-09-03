@@ -36,6 +36,7 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
      var appointmentTimes: [String] = [] //timePicker
      var selectedLanguage: String = ""
      var selectedTime: String = ""
+     var createdBy: PFUser?
    
     func setLabels() {
         if let costLabel = self.costLabel, sumLabel = self.sumLabel, nameLabel = self.nameLabel, business = self.business{
@@ -43,6 +44,7 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
             self.sumLabel.text = business.description
            // self.languages = business.services
             self.nameLabel.text = business.name
+            self.languages = business.services
             
             println(self.costLabel.text)
             println(self.sumLabel.text)
@@ -177,12 +179,59 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         }
     }
     
+    @IBAction func appointmentRequest(sender: UIButton) {
+        if (self.selectedLanguage == "None" || self.selectedTime == "None"){
+            //GIVES AN ERROR MESSAGE
+            var alert = UIAlertController(title: "Incomplete Request!", message: "Please select a time and service", preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "OK", style: .Default){ (action) in
+                //...
+            }
+            alert.addAction(OKAction)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else{ //User has selected time, date and language
+            sender.backgroundColor = UIColor.grayColor()
+            var appointment = PFObject(className: "Appointment")
+            appointment["requestedTime"] = self.selectedTime
+            appointment["requestedService"] = self.selectedLanguage
+            appointment["fromBiz"] = PFUser.currentUser()
+            appointment["isApproved"] = false
+            appointment["toBiz"] = business!.name
+            appointment["isRejected"] = false
+            appointment["isCancelled"] = false
+           // appointment["requestedDate"] = dateLabel.text
+            // setting global variable requestSubmitted to true for the query to be done.
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.requestSubmitted = true
+            
+            appointment.saveInBackgroundWithBlock{(success: Bool, error: NSError?) -> Void in
+                if (success){
+                    var alert = UIAlertController(title: "Request Sent!", message: "All scheduled appoitments will be displayed on the Dashboard. ", preferredStyle: .Alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .Default){ (action) in
+                        //...
+                        self.navigationController?.popToRootViewControllerAnimated(true)
+                    }
+                    alert.addAction(OKAction)
+                    
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+                else{
+                    println("Boy kya scene")
+                }
+            }
+        }
+    }
+
+    
 }
 
- 
+
+
+
 /*
  extension ReserveViewController: UITableViewDataSource{
-    
+
      func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         // Get the correct height if the cell is a DatePickerCell.
         var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)

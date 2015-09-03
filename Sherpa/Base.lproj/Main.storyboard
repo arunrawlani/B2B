@@ -648,6 +648,9 @@
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="34" y="781.5" width="532" height="47"/>
                                 </variation>
+                                <connections>
+                                    <action selector="appointmentRequest:" destination="G8P-6K-jD2" eventType="touchUpInside" id="Dnm-bK-ixx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -705,7 +708,7 @@
                     <size key="freeformSize" width="600" height="1290"/>
                     <connections>
                         <outlet property="costLabel" destination="sNf-7T-FcJ" id="uSw-1L-Q8j"/>
-                        <outlet property="datepicker" destination="VIk-sB-r2p" id="i6l-QV-ey2"/>
+                        <outlet property="datepicker" destination="VIk-sB-r2p" id="zOx-ER-7sm"/>
                         <outlet property="nameLabel" destination="x1h-5q-org" id="RxQ-uo-4SL"/>
                         <outlet property="pickerView" destination="pGL-Kq-fTz" id="XJ1-fQ-ylE"/>
                         <outlet property="requestButton" destination="ua4-Wu-qLi" id="cJJ-EQ-Idi"/>
