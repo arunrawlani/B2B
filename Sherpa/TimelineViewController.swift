@@ -1,12 +1,5 @@
-//
-//  TimelineViewController.swift
-//  Sherpa
-//
-//  Created by Akhil Nadendla on 7/19/15.
-//  Copyright (c) 2015 Derek Argueta. All rights reserved.
-//
 
-import UIKit
+/*import UIKit
 
 class TimelineViewController: UIViewController {
 
@@ -42,4 +35,4 @@ class TimelineViewController: UIViewController {
     }
     */
 
-}
+} */

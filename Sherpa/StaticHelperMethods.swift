@@ -1,10 +1,3 @@
-//
-//  StaticHelperMethods.swift
-//  Sherpa
-//
-//  Created by Essam Ewaisha on 8/1/15.
-//  Copyright (c) 2015 Derek Argueta. All rights reserved.
-//
 
 import Foundation
 class StaticHelperMethods {

@@ -1,11 +1,3 @@
-//
-//  ErrorHandling.swift
-//  Sherpa
-//
-//  Created by Arun Rawlani on 7/21/15.
-//  Copyright (c) 2015 Make School. All rights reserved.
-//
-
 
 import UIKit
 

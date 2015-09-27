@@ -18,10 +18,6 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>FacebookAppID</key>
-	<string>806911816095910</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -33,8 +29,12 @@
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>888131357924428</string>
 	<key>FacebookDisplayName</key>
-	<string>Sherpa</string>
+	<string>BizCollab</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

@@ -1,10 +1,3 @@
-//
-//  BusinessSectorsViewController.swift
-//  Sherpa
-//
-//  Created by Amit Mondal on 8/2/15.
-//  Copyright (c) 2015 Derek Argueta. All rights reserved.
-//
 
 import UIKit
 import Parse
@@ -15,10 +8,22 @@ import MapKit
 class BusinessSectorsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    let sectors: [String] = ["Finance", "Data Analysis", "Marketing", "Development", "Distribution & Retail", "Management"]
+    @IBOutlet weak var optionLabel: UILabel!
+    @IBOutlet weak var optionImage: UIImageView!
+    let services: [String] = ["Finance", "Data Analysis", "Marketing", "Development", "Distribution & Retail", "Management"]
+    let supplies: [String] = ["Distributors","Craftsmen","Dropshippers", "Manufacturers"]
+    var sectionSelected: Int = 0
     var selectedSector: String = ""
+    //Added for now
+    var mainCityLabelText: String = ""
+    var mainGraphicImageFileName: String = ""
+    var optionSelected: Int = 0
+    //close
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("This is \(mainCityLabelText) what")
+        optionLabel.text = mainCityLabelText
+        optionImage.image = UIImage(named: mainGraphicImageFileName)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         // Do any additional setup after loading the view.
@@ -35,22 +40,45 @@ class BusinessSectorsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        self.selectedSector = self.sectors[indexPath.row]
+        if(optionSelected == 0){
+            self.selectedSector = self.services[indexPath.row]
+        }
+        else{
+            self.selectedSector = self.supplies[indexPath.row]
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("SectorCell", forIndexPath: indexPath) as! BusinessSectorTableViewCell
-        cell.sectorNameLabel.text = self.sectors[indexPath.row]
+        if(optionSelected == 0){
+            cell.sectorNameLabel.text = self.services[indexPath.row]
+        }
+        else{
+            cell.sectorNameLabel.text = self.supplies[indexPath.row]
+        }
         cell.selectionStyle = UITableViewCellSelectionStyle.None
+        //These properties run on only iOS8 and higher so check
+        cell.layoutMargins = UIEdgeInsetsZero;
+        cell.preservesSuperviewLayoutMargins = false
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.sectors.count
+        if (self.optionSelected == 0){
+        return self.services.count
+        }
+        else{
+            return self.supplies.count
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.selectedSector = self.sectors[indexPath.row]
+        if(optionSelected == 0){
+            self.selectedSector = self.services[indexPath.row]
+        }
+        else{
+            self.selectedSector = self.supplies[indexPath.row]
+        }
         self.performSegueWithIdentifier("goToBusiness", sender: self)
     }
     

@@ -1,18 +1,16 @@
 //
-//  Tour.swift
-//  Sherpa
-//
-//  Created by Derek Argueta on 7/18/15.
-//  Copyright (c) 2015 Derek Argueta. All rights reserved.
+//  Business.swift
+//  BizCollab
 //
 
-import UIKit
+
+/*import UIKit
 import Parse
 
 class Tour: PFObject, PFSubclassing {
     
   @NSManaged var createdBy : PFUser?
-  @NSManaged var tourName: String?
+  @NSManaged var companyName: String?
   @NSManaged var langOffered: [String]?
   @NSManaged var tourDetail: String?
   //@NSManaged var reviews: [Review]
@@ -47,7 +45,7 @@ class Tour: PFObject, PFSubclassing {
 
     init(title: String, languages: [String], description: String) {
     
-    self.tourName = title
+    self.companyName = title
     self.languages = languages
     self.desc = description
     self.reviews = []
@@ -73,4 +71,4 @@ class Tour: PFObject, PFSubclassing {
       "description": desc,
       "languages": self.languages
     ]
-  } */
+  } */*/

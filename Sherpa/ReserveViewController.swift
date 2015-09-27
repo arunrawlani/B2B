@@ -1,15 +1,9 @@
-//
-//  ReserveViewController.swift
-//  Sherpa
-//
-//  Created by Praynaa Rawlani on 7/29/15.
-//  Copyright (c) 2015 Derek Argueta. All rights reserved.
-//
 
 import Foundation
 import AKPickerView_Swift
 import DatePickerCell
 import Parse
+import QuartzCore
 
 class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDelegate {
     
@@ -21,6 +15,7 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
     @IBOutlet weak var pickerView: AKPickerView!
     @IBOutlet weak var timePicker: AKPickerView!
     
+    @IBOutlet weak var datepicker: UIDatePicker!
     @IBOutlet weak var requestButton: UIButton!
     var requestPressedCounter: Int = 1
     
@@ -34,13 +29,14 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
     var languages = ["Taxation","Legal Consulting","Legal Service"]
     var time = ["9:30", "10:30", "11:30", "12:30", "1:30", "2:30", "3:30"]
     
-     var tourCost: String = "" //costLabel
-     var tourName: String = "" //nameLabel
-     var tourSum: String = "" //sumLabel
-     var tourLang: [String] = [] //pickerView
-     var tourTimes: [String] = [] //timePicker
+     var serviceCost: String = "" //costLabel
+     var companyName: String = "" //nameLabel
+     var serviceSum: String = "" //sumLabel
+     var companyService: [String] = [] //pickerView
+     var appointmentTimes: [String] = [] //timePicker
      var selectedLanguage: String = ""
      var selectedTime: String = ""
+     var createdBy: PFUser?
    
     func setLabels() {
         if let costLabel = self.costLabel, sumLabel = self.sumLabel, nameLabel = self.nameLabel, business = self.business{
@@ -48,6 +44,7 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
             self.sumLabel.text = business.description
            // self.languages = business.services
             self.nameLabel.text = business.name
+            self.languages = business.services
             
             println(self.costLabel.text)
             println(self.sumLabel.text)
@@ -82,7 +79,7 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         self.pickerView.font = UIFont(name: "AvenirNext-Medium", size: 17)!
         self.pickerView.textColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 0.5)
         self.pickerView.highlightedFont = UIFont(name: "AvenirNext-Medium", size: 17)!
-        self.pickerView.highlightedTextColor = UIColor(red: 229.0/256.0, green: 147.0/256.0, blue: 52.0/256.0, alpha: 1.0)
+        self.pickerView.highlightedTextColor = UIColor(red: 220.0/256.0, green: 147.0/256.0, blue: 52.0/256.0, alpha: 1.0)
         self.pickerView.textColor = UIColor.whiteColor()
         self.pickerView.interitemSpacing = 17.0
         self.pickerView.viewDepth = 1000.0
@@ -90,10 +87,10 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         self.pickerView.maskDisabled = false
         self.pickerView.reloadData()
         
-        self.timePicker.font = UIFont(name: "AvenirNext-Regular", size: 17)!
-        self.pickerView.textColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 0.5)
-        self.timePicker.highlightedFont = UIFont(name: "AvenirNext-Regular", size: 17)!
-        self.timePicker.highlightedTextColor = UIColor(red: 229.0/256.0, green: 147.0/256.0, blue: 52.0/256.0, alpha: 1.0)
+        self.timePicker.font = UIFont(name: "AvenirNext-Medium", size: 17)!
+        self.timePicker.textColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 0.5)
+        self.timePicker.highlightedFont = UIFont(name: "AvenirNext-Medium", size: 17)!
+        self.timePicker.highlightedTextColor = UIColor(red: 220.0/256.0, green: 147.0/256.0, blue: 52.0/256.0, alpha: 1.0)
         self.timePicker.textColor = UIColor.whiteColor()
         self.timePicker.interitemSpacing = 17.0
         self.timePicker.viewDepth = 1000.0
@@ -101,9 +98,15 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         self.timePicker.maskDisabled = false
         self.timePicker.reloadData()
         
-        //nameLabel.text = tourName
-        //costLabel.text = tourCost
-       // sumLabel.text = tourSum
+        
+        let currentDate = NSDate() //fetches current date
+        datepicker.minimumDate = currentDate //makes current date to be minimum
+        datepicker.date = currentDate //defaults to current date
+
+        //nameLabel.text = companyName
+        //costLabel.text = serviceCost
+       // sumLabel.text = serviceSum
+        
         
         
         self.selectedLanguage = "None"
@@ -176,12 +179,59 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
         }
     }
     
+    @IBAction func appointmentRequest(sender: UIButton) {
+        if (self.selectedLanguage == "None" || self.selectedTime == "None"){
+            //GIVES AN ERROR MESSAGE
+            var alert = UIAlertController(title: "Incomplete Request!", message: "Please select a time and service.", preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "OK", style: .Default){ (action) in
+                //...
+            }
+            alert.addAction(OKAction)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else{ //User has selected time, date and language
+            sender.backgroundColor = UIColor.grayColor()
+            var appointment = PFObject(className: "Appointment")
+            appointment["requestedTime"] = self.selectedTime
+            appointment["requestedService"] = self.selectedLanguage
+            appointment["fromBiz"] = PFUser.currentUser()
+            appointment["isApproved"] = false
+            appointment["toBiz"] = business!.name
+            appointment["isRejected"] = false
+            appointment["isCancelled"] = false
+           // appointment["requestedDate"] = dateLabel.text
+            // setting global variable requestSubmitted to true for the query to be done.
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.requestSubmitted = true
+            
+            appointment.saveInBackgroundWithBlock{(success: Bool, error: NSError?) -> Void in
+                if (success){
+                    var alert = UIAlertController(title: "Request Sent!", message: "All scheduled appointments will be displayed on the Dashboard. ", preferredStyle: .Alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .Default){ (action) in
+                        //...
+                        self.navigationController?.popToRootViewControllerAnimated(true)
+                    }
+                    alert.addAction(OKAction)
+                    
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+                else{
+                    println("Boy kya scene")
+                }
+            }
+        }
+    }
+
+    
 }
 
- 
+
+
+
 /*
  extension ReserveViewController: UITableViewDataSource{
-    
+
      func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         // Get the correct height if the cell is a DatePickerCell.
         var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)

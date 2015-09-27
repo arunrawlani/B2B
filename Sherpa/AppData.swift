@@ -1,10 +1,3 @@
-//
-//  DataExplore.swift
-//  Sherpa
-//
-//  Created by Akhil Nadendla on 7/18/15.
-//  Copyright (c) 2015 Akhil Nadendla. All rights reserved.
-//
 
 import Foundation
 
@@ -19,23 +12,23 @@ class DataExplore {
     }
     //TODO Write names of images of 2 cells
     let places = [
-        Entry(fname: "NewYork", heading: "Services"),
-        Entry(fname: "LasVegas", heading: "Supplies"),
+        Entry(fname: "serviceImage", heading: "Services"),
+        Entry(fname: "supplyImage", heading: "Supplies"),
         
     ]
 }
 
-class DataTours {
-    class TourEntry {
+class DataBiz {
+    class BizEntry {
         let bgImage: String
-        let tourName: String
+        let companyName: String
         let languages: String
         let cost: String
         let circularImage: String
         let cityImage: String
-        init(bgImage: String, tourName: String, languages: String, cost: String, circularImage: String, cityImage: String){
+        init(bgImage: String, companyName: String, languages: String, cost: String, circularImage: String, cityImage: String){
             self.bgImage = bgImage
-            self.tourName = tourName
+            self.companyName = companyName
             self.languages = languages
             self.cost = cost
             self.circularImage = circularImage
@@ -43,48 +36,48 @@ class DataTours {
         }
     }
     
-    let toursNY = [
-        TourEntry(bgImage: "tourEntryBG", tourName: "Central Park", languages: "English, French", cost: "$24", circularImage: "User", cityImage: "NewYork"),
-        TourEntry(bgImage: "tourEntryBG", tourName: "Statue of Liberty", languages: "German, French", cost: "$42", circularImage: "User", cityImage: "NewYork"),
-        TourEntry(bgImage: "tourEntryBG", tourName: "Upper East Side", languages: "Mandarin, Hindi", cost: "$99", circularImage: "User", cityImage: "NewYork"),
-        TourEntry(bgImage: "tourEntryBG", tourName: "Manhattan", languages: "Spanish, Russian", cost: "$12", circularImage: "User", cityImage: "NewYork")
+    let bizNY = [
+        BizEntry(bgImage: "BizEntryBG", companyName: "Central Park", languages: "UpCounsel", cost: "$24", circularImage: "User", cityImage: "serviceImage"),
+        BizEntry(bgImage: "BizEntryBG", companyName: "Statue of Liberty", languages: "UpCounsel", cost: "$42", circularImage: "User", cityImage: "serviceImage"),
+        BizEntry(bgImage: "BizEntryBG", companyName: "Upper East Side", languages: "UpCounsel", cost: "$99", circularImage: "User", cityImage: "serviceImage"),
+        BizEntry(bgImage: "BizEntryBG", companyName: "Manhattan", languages: "UpCounsel", cost: "$12", circularImage: "User", cityImage: "serviceImage")
     ]
-    let toursVegas = [
-        TourEntry(bgImage: "tourEntryBG", tourName: "Bellagio Resort", languages: "Mandarin, Hindi", cost: "$15", circularImage: "DisplayPicture", cityImage: "LasVegas"),
-        TourEntry(bgImage: "tourEntryBG", tourName: "Vegas Night Club", languages: "Japanese, Korean", cost: "$78", circularImage: "DisplayPicture", cityImage: "LasVegas"),
-        TourEntry(bgImage: "tourEntryBG", tourName: "Mandalay Bay", languages: "Greek, English", cost: "$32", circularImage: "DisplayPicture", cityImage: "LasVegas"),
-        TourEntry(bgImage: "tourEntryBG", tourName: "Stratosphere Tower", languages: "Hebrew, Dutch", cost: "$98", circularImage: "DisplayPicture", cityImage: "LasVegas")
+    let bizLV = [
+        BizEntry(bgImage: "BizEntryBG", companyName: "Bellagio Resort", languages: "Mandarin, Hindi", cost: "$15", circularImage: "DisplayPicture", cityImage: "supplyImage"),
+        BizEntry(bgImage: "BizEntryBG", companyName: "Vegas Night Club", languages: "Japanese, Korean", cost: "$78", circularImage: "DisplayPicture", cityImage: "supplyImage"),
+        BizEntry(bgImage: "BizEntryBG", companyName: "Mandalay Bay", languages: "Greek, English", cost: "$32", circularImage: "DisplayPicture", cityImage: "supplyImage"),
+        BizEntry(bgImage: "BizEntryBG", companyName: "Stratosphere Tower", languages: "Hebrew, Dutch", cost: "$98", circularImage: "DisplayPicture", cityImage: "supplyImage")
     ]
-    let toursLA = [
-        TourEntry(bgImage: "tourEntryBG", tourName: "Venice Beach", languages: "Mandarin, Hindi", cost: "$10", circularImage: "DisplayPicture", cityImage: "LosAngeles"),
-        TourEntry(bgImage: "tourEntryBG", tourName: "Downtown", languages: "English, German", cost: "$24", circularImage: "DisplayPicture", cityImage: "LosAngeles"),
-        TourEntry(bgImage: "tourEntryBG", tourName: "Hollywood", languages: "Spanish, Hindi", cost: "$95", circularImage: "DisplayPicture", cityImage: "LosAngeles"),
-        TourEntry(bgImage: "tourEntryBG", tourName: "Santa Monica", languages: "Spanish, Italian", cost: "$40", circularImage: "DisplayPicture", cityImage: "LosAngeles")
+    let bizLA = [
+        BizEntry(bgImage: "BizEntryBG", companyName: "Venice Beach", languages: "Mandarin, Hindi", cost: "$10", circularImage: "DisplayPicture", cityImage: "LosAngeles"),
+        BizEntry(bgImage: "BizEntryBG", companyName: "Downtown", languages: "English, German", cost: "$24", circularImage: "DisplayPicture", cityImage: "LosAngeles"),
+        BizEntry(bgImage: "BizEntryBG", companyName: "Hollywood", languages: "Spanish, Hindi", cost: "$95", circularImage: "DisplayPicture", cityImage: "LosAngeles"),
+        BizEntry(bgImage: "BizEntryBG", companyName: "Santa Monica", languages: "Spanish, Italian", cost: "$40", circularImage: "DisplayPicture", cityImage: "LosAngeles")
     ]
 }
 
 class DataDashBoard {
     class ScheduledEntry {
-        let tourTime: String
-        let tourTimeAmorPM: String
-        let tourName: String
-        let tourDate: String
-        let tourGuide: String
+        let appointmentTime: String
+        let appointmentTimeAmorPM: String
+        let companyName: String
+        let appointmentDate: String
+        let companyGuide: String
         
-        init(tourTime: String, tourTimeAmorPM: String, tourName: String, tourDate: String, tourGuide: String){
-            self.tourName = tourName
-            self.tourTime = tourTime
-            self.tourTimeAmorPM = tourTimeAmorPM
-            self.tourDate = tourDate
-            self.tourGuide = tourGuide
+        init(appointmentTime: String, appointmentTimeAmorPM: String, companyName: String, appointmentDate: String, companyGuide: String){
+            self.companyName = companyName
+            self.appointmentTime = appointmentTime
+            self.appointmentTimeAmorPM = appointmentTimeAmorPM
+            self.appointmentDate = appointmentDate
+            self.companyGuide = companyGuide
         }
     }
     
-    let scheduledTours = [
-        ScheduledEntry(tourTime: "10", tourTimeAmorPM: "AM", tourName: "Monkey Off Your Back", tourDate: "19.08.2015", tourGuide: ""),
-        ScheduledEntry(tourTime: "07", tourTimeAmorPM: "PM", tourName: "UpCounsel", tourDate: "10.12.2015", tourGuide: ""),
-        ScheduledEntry(tourTime: "12", tourTimeAmorPM: "AM", tourName: "Mighty Signal", tourDate: "13.05.2015", tourGuide: ""),
-        ScheduledEntry(tourTime: "03", tourTimeAmorPM: "PM", tourName: "Humanoid", tourDate: "24.03.2015", tourGuide: "")
+    let scheduledAppointment = [
+        ScheduledEntry(appointmentTime: "10", appointmentTimeAmorPM: "AM", companyName: "Monkey Off Your Back", appointmentDate: "19.08.2015", companyGuide: ""),
+        ScheduledEntry(appointmentTime: "07", appointmentTimeAmorPM: "PM", companyName: "UpCounsel", appointmentDate: "10.12.2015", companyGuide: ""),
+        ScheduledEntry(appointmentTime: "12", appointmentTimeAmorPM: "AM", companyName: "Mighty Signal", appointmentDate: "13.05.2015", companyGuide: ""),
+        ScheduledEntry(appointmentTime: "03", appointmentTimeAmorPM: "PM", companyName: "Humanoid", appointmentDate: "24.03.2015", companyGuide: "")
     ]
     
 }

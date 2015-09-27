@@ -9,10 +9,38 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7hx-1p-EIN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoWithoutBack" translatesAutoresizingMaskIntoConstraints="NO" id="uON-jO-VOh">
+                            <rect key="frame" x="78" y="214" width="219" height="240"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="219" id="2uU-Z9-w5e"/>
+                                <constraint firstAttribute="height" constant="240" id="xFa-Ti-qdW"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.16845128676470589" green="0.16845128676470589" blue="0.16845128676470589" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="uON-jO-VOh" secondAttribute="centerY" id="8ur-OP-Oqe"/>
+                        <constraint firstAttribute="centerX" secondItem="uON-jO-VOh" secondAttribute="centerX" id="p62-JH-AEZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="7hx-1p-EIN" secondAttribute="bottom" id="GGa-Np-2RH"/>
+                <constraint firstAttribute="trailing" secondItem="7hx-1p-EIN" secondAttribute="trailing" id="ZzF-gu-tym"/>
+                <constraint firstItem="7hx-1p-EIN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="str-yN-lcE"/>
+                <constraint firstItem="7hx-1p-EIN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xfD-x5-ufQ"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="490.5" y="209.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="logoWithoutBack" width="128" height="145"/>
+    </resources>
 </document>
