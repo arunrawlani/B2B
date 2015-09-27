@@ -13,6 +13,8 @@
 		15E23AF01B6DA9B2005DA49F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E23AEC1B6DA9B2005DA49F /* Service.swift */; };
 		15E23AF21B6DE09E005DA49F /* MainTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E23AF11B6DE09E005DA49F /* MainTimeLineViewController.swift */; };
 		15E23AF81B6DF358005DA49F /* StaticHelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E23AF71B6DF358005DA49F /* StaticHelperMethods.swift */; };
+		286CD6A71B99515F00AC1AA9 /* ParseTestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CD6A61B99515F00AC1AA9 /* ParseTestFile.swift */; };
+		286CD6AB1B995A9500AC1AA9 /* SomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CD6AA1B995A9500AC1AA9 /* SomeViewController.swift */; };
 		288EDE551B6DB73A00628862 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288EDE531B6DB73A00628862 /* BusinessTableViewCell.swift */; };
 		288EDE561B6DB73A00628862 /* BusinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288EDE541B6DB73A00628862 /* BusinessListViewController.swift */; };
 		289F977E1B6DE01300BB7304 /* BusinessReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289F977D1B6DE01300BB7304 /* BusinessReviewsViewController.swift */; };
@@ -77,6 +79,8 @@
 		15E23AEC1B6DA9B2005DA49F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		15E23AF11B6DE09E005DA49F /* MainTimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTimeLineViewController.swift; sourceTree = "<group>"; };
 		15E23AF71B6DF358005DA49F /* StaticHelperMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticHelperMethods.swift; sourceTree = "<group>"; };
+		286CD6A61B99515F00AC1AA9 /* ParseTestFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseTestFile.swift; sourceTree = "<group>"; };
+		286CD6AA1B995A9500AC1AA9 /* SomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeViewController.swift; sourceTree = "<group>"; };
 		288EDE531B6DB73A00628862 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
 		288EDE541B6DB73A00628862 /* BusinessListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessListViewController.swift; sourceTree = "<group>"; };
 		289F977D1B6DE01300BB7304 /* BusinessReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessReviewsViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				289F977F1B6DE94200BB7304 /* BusinessInformationViewController.swift */,
+				286CD6AA1B995A9500AC1AA9 /* SomeViewController.swift */,
+				286CD6A61B99515F00AC1AA9 /* ParseTestFile.swift */,
 				289F977D1B6DE01300BB7304 /* BusinessReviewsViewController.swift */,
 				289F97821B6DFDF800BB7304 /* BusinessSectorsViewController.swift */,
 				289F97841B6E007000BB7304 /* BusinessSectorTableViewCell.swift */,
@@ -472,6 +478,7 @@
 				15E23AF21B6DE09E005DA49F /* MainTimeLineViewController.swift in Sources */,
 				659895AE1B5B249400607B5E /* Tour.swift in Sources */,
 				F1EEC4591B5F339F008A04CF /* ErrorHandling.swift in Sources */,
+				286CD6AB1B995A9500AC1AA9 /* SomeViewController.swift in Sources */,
 				289F97801B6DE94200BB7304 /* BusinessInformationViewController.swift in Sources */,
 				E2A3444E1B5B370F004CAF3A /* ToursTableCell.swift in Sources */,
 				F10E8D831B693A790037E340 /* ReserveViewController.swift in Sources */,
@@ -487,6 +494,7 @@
 				288EDE561B6DB73A00628862 /* BusinessListViewController.swift in Sources */,
 				E2A3444C1B5B3140004CAF3A /* ToursViewController.swift in Sources */,
 				15E23AEE1B6DA9B2005DA49F /* Location.swift in Sources */,
+				286CD6A71B99515F00AC1AA9 /* ParseTestFile.swift in Sources */,
 				15E23AED1B6DA9B2005DA49F /* Business.swift in Sources */,
 				E2A344401B5B0516004CAF3A /* AppData.swift in Sources */,
 				A49B61331B5B9E0D00F81B3D /* CallViewController.swift in Sources */,
