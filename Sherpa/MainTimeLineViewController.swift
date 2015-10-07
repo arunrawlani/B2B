@@ -182,8 +182,15 @@ extension MainTimeLineViewController: UISearchBarDelegate {
         //self.newNewArray = temp
             var foundBusinesses: [Business] = []
             var queryNormal = PFQuery(className: "Business")
+            var queryTag = PFQuery(className: "Business")
+            queryTag.whereKey("tags", equalTo: searchBar.text!)
+            var queryCity = PFQuery(className: "Business")
+            var queryState = PFQuery(className: "Business")
+            queryCity.whereKey("city", containsString: searchBar.text)
+            queryState.whereKey("state", containsString: searchBar.text)
             queryNormal.whereKey("name", containsString: searchBar.text)
-            queryNormal.findObjectsInBackgroundWithBlock({ (results: [AnyObject]?, error: NSError?) -> Void in
+            var queryTotal: PFQuery = PFQuery.orQueryWithSubqueries([queryTag, queryNormal, queryCity, queryState])
+            queryTotal.findObjectsInBackgroundWithBlock({ (results: [AnyObject]?, error: NSError?) -> Void in
                 if results != nil && results?.count > 0 {
                     for result in results! {
                         let business = result as! PFObject
