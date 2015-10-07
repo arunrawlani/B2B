@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F2E710CE6EF177C04AB2728786E12407BB9C6D4D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F2E710CE6EF177C04AB2728786E12407BB9C6D4D" : 0,
+    "5FFE0201759369CEAD45FE5D8A72919EF2844175" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "953C7349-2E20-4829-9A21-867CA5AD7B7A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F2E710CE6EF177C04AB2728786E12407BB9C6D4D" : "Sparta",
+    "5FFE0201759369CEAD45FE5D8A72919EF2844175" : "ios"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sherpa",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sherpa.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/sherpaah8\/ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5FFE0201759369CEAD45FE5D8A72919EF2844175"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/arunrawlani\/Development-Sherpa",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F2E710CE6EF177C04AB2728786E12407BB9C6D4D"
+    }
+  ]
+}

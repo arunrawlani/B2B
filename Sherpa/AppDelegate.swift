@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //If no user, then create a login screen. Allows for some customization, parseLoginHelper as delegate
         else {
             
-            logInViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten
+            logInViewController.fields = [.UsernameAndPassword , .LogInButton , .SignUpButton , .PasswordForgotten]
             
             startViewController = logInViewController
             

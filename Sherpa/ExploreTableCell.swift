@@ -18,10 +18,10 @@ class ExploreTableCell: UITableViewCell {
 
     @IBAction func onImageClicked(sender: AnyObject) {
         if(cityId == 0){
-            println("Services")
+            print("Services")
         }
         else if(cityId == 1){
-            println("Supplies")
+            print("Supplies")
         }
         if (delegate != nil) {
             delegate!.pressedImage(cityNameLabel.text!, imageFilename: imageFilename, selectedCity: cityId)

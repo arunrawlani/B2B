@@ -39,7 +39,7 @@ class SignUpViewController: UIViewController{
         var password = self.passwordTF.text
         var email = self.emailTF.text
         
-        if (count(username.utf16) < 3 || count(password.utf16) < 3){
+        if (username!.utf16.count < 3 || password!.utf16.count < 3){
             
             var alert = UIAlertController(title: "Invalid", message: "Username and Password are too short.", preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "OK", style: .Default){ (action) in
@@ -49,7 +49,7 @@ class SignUpViewController: UIViewController{
             
             self.presentViewController(alert, animated: true, completion: nil)
         }
-        else if (count(email.utf16) < 10) {
+        else if (email!.utf16.count < 10) {
             
             var alert = UIAlertController(title: "Invalid", message: "Please enter a valid email", preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "OK", style: .Default){ (action) in

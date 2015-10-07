@@ -21,16 +21,16 @@ class Location {
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = "\(self.city), \(self.state)"
         let search = MKLocalSearch(request: request)
-        search.startWithCompletionHandler({(response: MKLocalSearchResponse!,
-            error: NSError!) in
+        search.startWithCompletionHandler { (response: MKLocalSearchResponse?, error: NSError?) -> Void in
             if error != nil {
-                println("Error occured in search: \(error.localizedDescription)")
-            } else if response.mapItems.count == 0 {
-                println("No matches found")
+                print("Error occured in search: \(error!.localizedDescription)")
+            } else if response!.mapItems.count == 0 {
+                print("No matches found")
             } else {
-                self.location = (response.mapItems[response.mapItems.count-1] as! MKMapItem).placemark.coordinate
+                self.location = (response!.mapItems[response!.mapItems.count-1] as! MKMapItem).placemark.coordinate
             }
-        })
+            
+        }
     }
     func isInRange(rangeInMeters: Double) -> Bool {
         var userLocation = CLLocationCoordinate2D(latitude: 37.76, longitude: -122.39)

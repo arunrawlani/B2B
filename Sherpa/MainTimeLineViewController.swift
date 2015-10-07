@@ -1,11 +1,19 @@
 
 import UIKit
+import Parse
 
 class MainTimeLineViewController: UIViewController {
     var newArray = [Business]()
     var newNewArray = [Business]()
     var searchRadius: Float = 0
     var selectedBusiness: Business?
+    var foundBusinesses: [Business] = [] {
+        didSet {
+            print(foundBusinesses.count)
+            self.newNewArray = foundBusinesses
+            self.tableView.reloadData()
+        }
+    }
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
 
@@ -21,11 +29,11 @@ class MainTimeLineViewController: UIViewController {
             if self.searchBar.text != ""{
             let string = self.searchBar.text
             var nameBool = false
-            if  T.name.lowercaseString.rangeOfString(string) != nil{
+            if  T.name.lowercaseString.rangeOfString(string!) != nil{
                 nameBool = true
             }
             
-            if nameBool ||  self.foundTag(string, objectTags: T.tags) || self.checkServices(T, serviceToBeSearched: string ){
+            if nameBool ||  self.foundTag(string!, objectTags: T.tags) || self.checkServices(T, serviceToBeSearched: string! ){
                 searchBool = true
             } else {
                 searchBool = false
@@ -102,7 +110,9 @@ extension MainTimeLineViewController : UITableViewDataSource {
         for string in newNewArray[indexPath.row].services {
             servicesString += string + ", "
         }
-        cell.servicesLabel.text = servicesString.substringToIndex(advance(servicesString.startIndex, count(servicesString)-2))
+        let startIndex = servicesString.startIndex.advancedBy((servicesString.characters.count-2))
+        //cell.servicesLabel.text = servicesString.substringToIndex(advance(servicesString.startIndex, servicesString.characters.count-2))
+        cell.servicesLabel.text = servicesString.substringToIndex(startIndex)
         cell.selectionStyle = UITableViewCellSelectionStyle.None
        //TODO implement price range cell.rating = allBusinesses[indexPath.row].reviews
         return cell
@@ -152,24 +162,36 @@ extension MainTimeLineViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
     }
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         let string = searchBar.text
-        if !string.isEmpty{
+        if !string!.isEmpty{
         var temp = newArray.filter{(T:Business) -> Bool in
             // checking it is not nil
             var nameBool = false
-            if  T.name.lowercaseString.rangeOfString(string) != nil{
+            if  T.name.lowercaseString.rangeOfString(string!) != nil{
                 nameBool = true
             }
             
-            if nameBool ||  self.foundTag(string, objectTags: T.tags) || self.checkServices(T, serviceToBeSearched: string ){
+            if nameBool ||  self.foundTag(string!, objectTags: T.tags) || self.checkServices(T, serviceToBeSearched: string! ){
                 return true
             }
             
             return false
             // Do any additional setup after loading the view.
-        }
-        self.newNewArray = temp
+            }
+        //self.newNewArray = temp
+            var foundBusinesses: [Business] = []
+            var queryNormal = PFQuery(className: "Business")
+            queryNormal.whereKey("name", containsString: searchBar.text)
+            queryNormal.findObjectsInBackgroundWithBlock({ (results: [AnyObject]?, error: NSError?) -> Void in
+                if results != nil && results?.count > 0 {
+                    for result in results! {
+                        let business = result as! PFObject
+                        self.foundBusinesses.append(self.parseToBusiness(business))
+                    }
+                    
+                }
+            })
         }
         self.tableView.reloadData()
         
@@ -196,6 +218,25 @@ private func checkServices(T: Business, serviceToBeSearched:String) -> Bool{
     return false
 }
 
+
+    func parseToBusiness(object: PFObject) -> Business{
+        let name = object.objectForKey("name") as! String
+        let city = object.objectForKey("city") as! String
+        let state = object.objectForKey("state") as! String
+        let tags = object.objectForKey("tags") as! [String]
+        let services = object.objectForKey("services") as! [String]
+        let sector = object.objectForKey("sector") as! String
+        let legalValidation = object.objectForKey("legalValidation") as! Bool
+        let price = object.objectForKey("price") as! String
+        let description = object.objectForKey("description") as! String
+        let reviews = object.objectForKey("reviews") as! [String]
+        var reviewArray: [Review] = []
+        for reviewString in reviews {
+            reviewArray.append(Review(rating: 5, description: reviewString))
+        }
+        let result = Business(name: name, sector: sector, tags: tags, services: services, legalValidation: legalValidation, city: city, state: state, reviews: reviewArray, price: price, description: description)
+        return result
+    }
 
 
 }

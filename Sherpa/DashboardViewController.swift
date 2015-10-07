@@ -33,11 +33,11 @@ class DashboardViewController: UIViewController{
         isCancelledQuery!.findObjectsInBackgroundWithBlock {(result: [AnyObject]?, error: NSError?) -> Void in
             
             self.appointments = result as? [Appointment] ?? []
-            println("This is \(self.appointments.count)")
+            print("This is \(self.appointments.count)")
             self.tableView.reloadData()
             
         }
-    println("This is \(self.appointments.count)")
+    print("This is \(self.appointments.count)")
     }
     
 }

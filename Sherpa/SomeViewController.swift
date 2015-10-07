@@ -75,19 +75,18 @@ class SomeViewController: UIViewController, CLLocationManagerDelegate{
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = "\(city), \(state)"
         let search = MKLocalSearch(request: request)
-        search.startWithCompletionHandler({(response: MKLocalSearchResponse!,
-            error: NSError!) in
+        search.startWithCompletionHandler { (response: MKLocalSearchResponse?, error: NSError?) -> Void in
             if error != nil {
-                println("Error occured in search: \(error.localizedDescription)")
-            } else if response.mapItems.count == 0 {
-                println("No matches found")
+                print("Error occured in search: \(error!.localizedDescription)")
+            } else if response!.mapItems.count == 0 {
+                print("No matches found")
             } else {
-                let coordinate =  (response.mapItems[response.mapItems.count-1] as! MKMapItem).placemark.coordinate
+                let coordinate =  (response!.mapItems[response!.mapItems.count-1] as! MKMapItem).placemark.coordinate
                 let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
                 //global variable parseGeoPoint contains newly found location coordinate
                 self.parseGeoPoint = PFGeoPoint(location: location)
             }
-        })
+        }
     }
     
     //check if user allows app to get current location
@@ -100,8 +99,9 @@ class SomeViewController: UIViewController, CLLocationManagerDelegate{
     }
     
     //sets the global variable "currentLocationGeoPoint" that stores the user's current location
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        var coordinate : CLLocationCoordinate2D = manager.location.coordinate
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        var coordinate : CLLocationCoordinate2D = manager.location!.coordinate
         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         self.currentLocationGeoPoint? = PFGeoPoint(location: location)
         self.locationManager.stopUpdatingLocation()

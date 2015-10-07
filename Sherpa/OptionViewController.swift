@@ -21,7 +21,7 @@ class OptionViewController: UIViewController, PFLogInViewControllerDelegate, PFS
         
         if (PFUser.currentUser() == nil) {
             
-            self.logInViewController.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.SignUpButton | PFLogInFields.PasswordForgotten | PFLogInFields.DismissButton
+            self.logInViewController.fields = [PFLogInFields.UsernameAndPassword , PFLogInFields.LogInButton , PFLogInFields.SignUpButton , PFLogInFields.PasswordForgotten , PFLogInFields.DismissButton]
             
             var logInLogoTitle = UILabel()
             logInLogoTitle.text = "BizCollab"
@@ -68,7 +68,7 @@ class OptionViewController: UIViewController, PFLogInViewControllerDelegate, PFS
     }
     
     func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {
-        println("Failed to login...")
+        print("Failed to login...")
     }
     
     func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
@@ -84,7 +84,7 @@ class OptionViewController: UIViewController, PFLogInViewControllerDelegate, PFS
     }
     func signUpViewController(signUpController: PFSignUpViewController, didFailToSignUpWithError error: NSError?) {
         
-        println("Failed to sign up...")
+        print("Failed to sign up...")
         
     }
     
@@ -92,7 +92,7 @@ class OptionViewController: UIViewController, PFLogInViewControllerDelegate, PFS
     
     func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
         
-        println("User dismissed sign up.")
+        print("User dismissed sign up.")
         
     }
     

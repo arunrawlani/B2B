@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
         var password = self.passwordTF.text
         
         
-        if (count(username.utf16) < 3 || count(password.utf16) < 3){
+        if (username!.utf16.count < 3 || password!.utf16.count < 3){
             
             var alert = UIAlertController(title: "Invalid", message: "Username and Password are too short.", preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "OK", style: .Default){ (action) in
@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
         {
             self.actInd.startAnimating()
             
-            PFUser.logInWithUsernameInBackground(username, password: password, block: {(user, error) -> Void in
+            PFUser.logInWithUsernameInBackground(username!, password: password!, block: {(user, error) -> Void in
                 
                 self.actInd.stopAnimating()
                 

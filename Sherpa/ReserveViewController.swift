@@ -46,8 +46,8 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
             self.nameLabel.text = business.name
             self.languages = business.services
             
-            println(self.costLabel.text)
-            println(self.sumLabel.text)
+            print(self.costLabel.text)
+            print(self.sumLabel.text)
         }
     }
     
@@ -171,11 +171,11 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
     func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
         if(pickerView.tag == 1){
         self.selectedLanguage = self.languages[item]
-        println("You selected \(selectedLanguage)")
+        print("You selected \(selectedLanguage)")
         }
         else{
             self.selectedTime = self.time[item]
-            println("You selected \(selectedTime)")
+            print("You selected \(selectedTime)")
         }
     }
     
@@ -217,7 +217,7 @@ class ReserveViewController: UIViewController, AKPickerViewDataSource, AKPickerV
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
                 else{
-                    println("Boy kya scene")
+                    print("Boy kya scene")
                 }
             }
         }

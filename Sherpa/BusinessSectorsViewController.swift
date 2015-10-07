@@ -21,7 +21,7 @@ class BusinessSectorsViewController: UIViewController, UITableViewDelegate, UITa
     //close
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("This is \(mainCityLabelText) what")
+        print("This is \(mainCityLabelText) what")
         optionLabel.text = mainCityLabelText
         optionImage.image = UIImage(named: mainGraphicImageFileName)
         self.tableView.delegate = self
